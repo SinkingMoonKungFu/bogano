@@ -1,0 +1,25 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aclonica', sans-serif;
+}
+
+.textmark {
+    color: black;
+    text-shadow: 4px 4px 5px #808080;
+    line-height: 1.2;
+}
+
+@media (max-width: 600px) {
+    h3 {
+        font-size: 8pt;
+    }
+
+    .textmark {
+        max-width: 7rem;
+    }
+}
+
+@media (min-width: 601px) {
+    .textmark {
+        max-width: 11em;
+    }
+}

@@ -1,0 +1,93 @@
+@import '../../assets/scss/colors';
+
+.main-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Alegreya", serif;
+    font-weight: 600;
+
+    .menus {
+            display: flex;
+            align-items: center;
+
+            a,
+            .btn {
+                font-family: Alegreya, serif;
+                font-weight: bold;
+                color: gray;
+
+                &:hover {
+                    color: $tundora;
+                }
+            }
+
+
+            a {
+                text-decoration: none;
+            }
+
+            .plain-dropdown button {
+                border: none;
+            }
+
+            button::after {
+                vertical-align: middle;
+            }
+    }
+
+    @media only screen and (max-width: 600px) {
+        .menus {
+            flex-direction: column;
+            gap: none;
+
+            a.dropdown-item {
+                display: block;
+                font-size: 10pt;
+                margin-left: .25rem;
+            }
+
+            .dropdown-header {
+                padding: .25rem 0 .25rem 0;
+                font-size: 14pt;
+                font-weight: bold;
+                margin-top: 1rem;
+
+                &:nth-child(1) {
+                    margin-top: 0rem !important;
+                }
+            }
+        }
+    }
+
+    @media only screen and (min-width: 601px) {
+        .menus {
+            flex-direction: row;
+            gap: 1.25rem;
+
+            .dropdown-header, .dropdown-toggle {
+                font-size: 14pt;
+            }
+        }
+    }
+}
+
+.dropdown-menu {
+    background-color: $porcelain;
+    border-top: 5px solid $flame-pea;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+    color: $flame-pea;
+    padding: 1.2rem;
+
+    &::before {
+        border: 10px solid transparent;
+        border-bottom-color: transparent;
+        content: ' ';
+        height: 0;
+        position: absolute;
+        right: 10px;
+        width: 0;
+    }
+}
