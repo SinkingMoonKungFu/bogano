@@ -1,0 +1,17 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/fonts';
+
+.hero-headline {
+    background-color: $black-half-transparent;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #fff;
+    font-size: 2.6rem;
+    line-height: 1.2;
+    padding: 1rem;
+    transition: all 0.2s ease;
+
+    &:hover {
+        background-color: $tundora;
+    }
+}
