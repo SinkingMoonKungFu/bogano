@@ -1,5 +1,5 @@
 {
-  "name": "smskf-components",
+  "name": "@SinkingMoonKungFu/argano",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -44,5 +44,9 @@
     "vite": "^4.4.5"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "smskf-components@0.0.0"
+  "_id": "@SinkingMoonKungFu/argano@0.0.0.",
+  "volta": {
+    "node": "18.18.0",
+    "yarn": "3.6.4"
+  }
 }
