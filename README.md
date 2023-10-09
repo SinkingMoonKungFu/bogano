@@ -1,4 +1,4 @@
-# Argano
+# Bogano
 
 This is the new React-based website for the Sinking Moon School of Kung Fu.
 This website is open source, meaning that you can use the software for your

@@ -5,9 +5,9 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@SinkingMoonKungFu/argano@workspace:.":
+"@SinkingMoonKungFu/bogano@workspace:.":
   version: 0.0.0-use.local
-  resolution: "@SinkingMoonKungFu/argano@workspace:."
+  resolution: "@SinkingMoonKungFu/bogano@workspace:."
   dependencies:
     "@storybook/addon-essentials": ^7.5.0-alpha.3
     "@storybook/addon-interactions": ^7.5.0-alpha.3

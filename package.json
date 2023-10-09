@@ -1,5 +1,5 @@
 {
-  "name": "@SinkingMoonKungFu/argano",
+  "name": "@SinkingMoonKungFu/bogano",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -44,7 +44,7 @@
     "vite": "^4.4.5"
   },
   "readme": "ERROR: No README data found!",
-  "_id": "@SinkingMoonKungFu/argano@0.0.0.",
+  "_id": "@SinkingMoonKungFu/bogano@0.0.0.",
   "volta": {
     "node": "18.18.0",
     "yarn": "3.6.4"
