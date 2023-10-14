@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 h1,
 h2,
 h3,
@@ -13,4 +17,10 @@ h6 {
     &.shadowed {
         text-shadow: 4px 4px 5px $light-gray;
     }
+}
+
+body {
+    font: 100%/1.5 "Alegreya", serif;
+    font-size: 100%;
+    line-height: 1.5;
 }
