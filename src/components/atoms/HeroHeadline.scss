@@ -1,12 +1,15 @@
 @import '../../assets/scss/colors';
 @import '../../assets/scss/fonts';
 
+a {
+    text-decoration: none;
+}
+
 .hero-headline {
     background-color: $black-half-transparent;
     border-radius: 6px;
     box-sizing: border-box;
     color: #fff;
-    font-size: 2.6rem;
     line-height: 1.2;
     padding: 1rem;
     transition: all 0.2s ease;
@@ -14,4 +17,19 @@
     &:hover {
         background-color: $tundora;
     }
+
+    &.with-icon {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    &.small {
+        max-width: 22em;
+    }
+}
+
+h3.hero-headline {
+    font-size: 1rem;
 }

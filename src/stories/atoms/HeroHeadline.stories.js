@@ -15,3 +15,12 @@ export const Default = {
     text: "Martial arts without egos or intimidation",
   },
 };
+
+export const WithMapIconAndLink = {
+  args: {
+    text: "13755 Nicollet Ave. Suite 203 Burnsville, MN 55337",
+    icon: "pin",
+    size: "small",
+    link: "http://www.sinkingmoon.com",
+  },
+};
