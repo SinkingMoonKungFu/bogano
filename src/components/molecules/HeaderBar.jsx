@@ -1,6 +1,5 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Dropdown from 'react-bootstrap/Dropdown';
 
 import { getWindowDimensions } from "../../util/Viewport";
 import { buildHeaderMenu } from "./MenuUtils";

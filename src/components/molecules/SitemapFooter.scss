@@ -1,0 +1,42 @@
+@import '../../assets/scss/colors';
+
+.footer {
+    background-color: $flame-pea;
+    box-sizing: border-box;
+    clear: both;
+    color: white;
+    display: block;
+    line-height: 1.2;
+    margin: 0;
+    overflow: hidden;
+    padding: .5em 0;
+
+    .layout {
+        max-width: 80em;
+        margin: 0 auto;
+        padding: 1rem;
+
+        .layout-oneline {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding-bottom: 1rem;
+        }
+    }
+
+    a {
+        color: $solitaire;
+        outline: 0;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+}
+
+.copyright {
+    font-size: .8em;
+
+    p {
+        margin-top: 0;
+        margin-bottom: 0.2em;
+    }
+}

@@ -4,6 +4,8 @@ import PropTypes from "prop-types";
 import { Textmark } from './Textmark';
 
 import logoImg from "../../assets/smskf-logo.svg";
+import monochromeLogo from '/images/logo-monochrome.svg';
+
 import "./Logo.css";
 
 /**
@@ -11,13 +13,18 @@ import "./Logo.css";
  */
 export const Logo = ({ ...props }) => {
   const textmark = (
-    <Textmark text={props.logoTitle} />
+    <Textmark alternate={props.monochrome ? true : false} text={props.logoTitle} />
   );
 
+  let styleObj = {};
+  if (!props.monochrome) {
+    styleObj.marginLeft = "1rem";
+  };
+
   const logoContainer = (
-    <div className="logo-container">
+    <div className="logo-container" style={styleObj}>
       <div className="inline-logo-container">
-        <img className="logo" src={logoImg} alt={props.logoTitle}></img>
+        <img className="logo" src={props.monochrome ? monochromeLogo : logoImg} alt={props.logoTitle}></img>
       </div>
         {props.textmark ? textmark : ""}
     </div>
