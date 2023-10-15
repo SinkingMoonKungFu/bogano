@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Logo } from '../atoms/Logo';
+import { Logo } from '../01-atoms/Logo';
+import { Sitemap } from '../02-molecules/Sitemap';
 
 import './SitemapFooter.scss';
 
@@ -15,6 +16,7 @@ export const SitemapFooter = ({...props}) => {
                             textmark={true}
                             monochrome={true} />
                     </a>
+                    <Sitemap sitemap={props.sitemap} dark={true} />
                 </div>
                 <div className="copyright">
                     <p>{props.copyrightInfo}</p>

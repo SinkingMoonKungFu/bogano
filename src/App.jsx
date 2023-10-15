@@ -1,6 +1,6 @@
 import { useState } from 'react'
-import { HeaderBar } from './components/molecules/HeaderBar';
-import { HeroBlock } from './components/molecules/HeroBlock';
+import { HeaderBar } from './components/02-molecules/HeaderBar';
+import { HeroBlock } from './components/02-molecules/HeroBlock';
 import './App.scss'
 
 function App() {

@@ -23,13 +23,6 @@
             padding-bottom: 1rem;
         }
     }
-
-    a {
-        color: $solitaire;
-        outline: 0;
-        text-decoration: none;
-        transition: all 0.2s ease;
-    }
 }
 
 .copyright {
@@ -39,4 +32,15 @@
         margin-top: 0;
         margin-bottom: 0.2em;
     }
+
+    a {
+        color: $solitaire;
+        outline: 0;
+        text-decoration: none;
+        transition: all 0.2s ease;
+    }
+}
+
+.logo-footer-link {
+    text-decoration: none;
 }

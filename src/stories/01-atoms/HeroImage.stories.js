@@ -1,4 +1,4 @@
-import { HeroImage } from "../../components/atoms/HeroImage";
+import { HeroImage } from "../../components/01-atoms/HeroImage";
 
 export default {
   title: "Atoms/HeroImage",

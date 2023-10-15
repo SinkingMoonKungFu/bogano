@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+body {
+    font: 100%/1.5 "Alegreya", serif;
+    font-size: 100%;
+    line-height: 1.5;
+}
+
 h1,
 h2,
 h3,
@@ -11,16 +17,34 @@ h4,
 h5,
 h6 {
     color: black;
-    font-family: 'Aclonica', sans-serif !important;
-    font-weight: bold !important;
+    font-family: 'Aclonica', sans-serif;
+    font-weight: bold;
 
     &.shadowed {
         text-shadow: 4px 4px 5px $light-gray;
     }
 }
 
-body {
-    font: 100%/1.5 "Alegreya", serif;
-    font-size: 100%;
-    line-height: 1.5;
+h1 {
+    font-size: 40pt;
+}
+
+h2 {
+    font-size: 32pt;
+}
+
+h3 {
+    font-size: 20pt;
+}
+
+h4 {
+    font-size: 16pt;
+}
+
+h5 {
+    font-size: 14pt;
+}
+
+h6 {
+    font-size: 10pt;
 }

@@ -1,4 +1,4 @@
-import { HeroHeadline } from "../../components/atoms/HeroHeadline";
+import { HeroHeadline } from "../../components/01-atoms/HeroHeadline";
 
 export default {
   title: "Atoms/HeroHeadline",
@@ -20,7 +20,7 @@ export const WithMapIconAndLink = {
   args: {
     text: "13755 Nicollet Ave. Suite 203 Burnsville, MN 55337",
     icon: "pin",
-    size: "small",
+    size: "smallBox",
     link: "http://www.sinkingmoon.com",
   },
 };

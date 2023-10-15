@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 import { getWindowDimensions } from "../../util/Viewport";
 import { buildHeaderMenu } from "./MenuUtils";
-import { Logo } from '../atoms/Logo';
+import { Logo } from '../01-atoms/Logo';
 
 import "./HeaderBar.scss";
 

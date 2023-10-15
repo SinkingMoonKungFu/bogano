@@ -1,4 +1,4 @@
-import { HeroBlock } from "../../components/molecules/HeroBlock";
+import { HeroBlock } from "../../components/02-molecules/HeroBlock";
 
 export default {
   title: "Molecules/HeroBlock",
