@@ -10,17 +10,19 @@ export const SitemapFooter = ({...props}) => {
         <footer className="footer" role="sitemap">
             <div className="layout">
                 <div className="layout-oneline">
-                    <a class="logo-footer-link" href={props.logoLink}>
-                        <Logo
-                            logoTitle={props.logoTitle}
-                            textmark={true}
-                            monochrome={true} />
-                    </a>
+                    <div className="logo-and-copyright-container">
+                        <a class="logo-footer-link" href={props.logoLink}>
+                            <Logo
+                                logoTitle={props.logoTitle}
+                                textmark={true}
+                                monochrome={true} />
+                        </a>
+                        <div className="copyright">
+                            <p>{props.copyrightInfo}</p>
+                            <p><a href={props.imageAcknowledgementsLink}>Image and Copyright Acknowledgements</a></p>
+                        </div>
+                    </div>
                     <Sitemap sitemap={props.sitemap} dark={true} />
-                </div>
-                <div className="copyright">
-                    <p>{props.copyrightInfo}</p>
-                    <p><a href={props.imageAcknowledgementsLink}>Image and Copyright Acknowledgements</a></p>
                 </div>
             </div>
         </footer>

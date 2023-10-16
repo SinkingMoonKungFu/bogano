@@ -2,7 +2,6 @@
 
 .footer {
     background-color: $flame-pea;
-    box-sizing: border-box;
     clear: both;
     color: white;
     display: block;
@@ -21,11 +20,13 @@
             flex-direction: row;
             align-items: center;
             padding-bottom: 1rem;
+            justify-content: space-between;
         }
     }
 }
 
 .copyright {
+    padding-top: 1rem;
     font-size: .8em;
 
     p {
