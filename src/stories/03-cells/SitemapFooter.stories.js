@@ -23,7 +23,7 @@ export const Default = {
         links: [
           {
             title: "History & Mission",
-            link: "https://www.sinkingmoon.com/mission",
+            link: "/mission",
           },
           {
             title: "Instructors & Staff",
@@ -98,7 +98,7 @@ export const Default = {
           },
           {
             title: "Prospective Students",
-            link: "https://www.sinkingmoon.com/students/prospectives",
+            link: "/students/prospective",
           },
         ],
       },
