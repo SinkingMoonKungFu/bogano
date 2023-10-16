@@ -17,12 +17,12 @@ export const HeroHeadline = ({ ...props }) => {
         </h2>
     );
 
-    if (props.size === 'small') {
-        classNames.push('small');
+    if (props.size === 'smallBox') {
+        classNames.push('smallBox');
         heroContainer = (
-            <h3 className={classNames.join(' ')}>
+            <h5 className={classNames.join(' ')}>
                 {icon} {props.text}
-            </h3>
+            </h5>
         );
     }
 
