@@ -1,0 +1,37 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/fonts';
+
+.instructor-profile {
+    display: flex;
+    flex-direction: row;
+
+    .instructor-profile-text {
+        display: inline-block;
+        margin-bottom: 2em;
+        margin-left: 1em;
+        max-width: 60%;
+        vertical-align: top;
+
+        h3.instructor-profile-name {
+            font-family: 'Aclonica', sans-serif;
+            color: $flame-pea;
+            text-shadow: 0 0 8px $light-gray;
+            margin-bottom: 0;
+        }
+
+        .instructor-profile-titles {
+            margin-top: 0;
+            padding-top: 0;
+            border-bottom: 1px solid $alto;
+            margin-bottom: 1em;
+
+            h4.instructor-profile-title {
+                font-size: 10pt;
+                color: $light-gray;
+                margin: 0;
+                margin-bottom: 0px;
+                padding: 0;
+            }
+        }
+    }
+}
