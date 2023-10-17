@@ -27,6 +27,7 @@ export const InfoPage = ({...props}) => {
                         <div className="textContent">
                             {topLevelParagraphs}
                             <img className="textContent-image" src={props.mainImage} alt={`${props.title} Image`}></img>
+                            {props.children}
                         </div>
                         <div className="sidebar"></div>
                     </section>
