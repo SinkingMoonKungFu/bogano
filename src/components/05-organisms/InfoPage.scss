@@ -38,10 +38,6 @@ main[role="main"] {
             padding-right: 1em;
             width: 70%;
 
-            *:first-child {
-                margin-top: 1rem;
-            }
-
             .textContent-image {
                 border-radius: 6px;
                 height: auto;
@@ -50,11 +46,32 @@ main[role="main"] {
             }
 
             .subsection {
+                ul {
+                    list-style-type: georgian;
+                }
             }
         }
 
         .sidebar {
             width: 25em;
         }
+    }
+}
+
+.subsection-title {
+    margin-top: 0 !important;
+    margin: 0 0 1rem 0;
+    position: relative;
+    color: $tundora;
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 2.2rem;
+        height: 0.2rem;
+        top: 30px;
+        left: 1px;
+        background: $silver-chalice;
     }
 }
