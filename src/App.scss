@@ -22,19 +22,20 @@ body {
 header {
   flex: 1 1 10%;
   padding: .5em 0;
-  // height: 15%;
 }
 
 [role="main"] {
   flex: 6 6 60%;
   box-sizing: border-box;
   overflow: hidden;
-  // height: 60%;
+
+  .hero-block {
+    height: 60%;
+  }
 }
 
 footer {
-  flex: 3 3 30%;
-  // height: 15%;
+  flex: 3 3 25%;
 }
 
 img {

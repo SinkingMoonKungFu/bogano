@@ -1,8 +1,10 @@
 .block-tout {
+    aspect-ratio: 1 / 1;
     display: block;
-    max-width: 14rem;
-    max-height: 14rem;
-    margin-bottom: 0.5em;
+    box-sizing: border-box;
+    // max-width: 10rem;
+    // max-height: 60%;
+    // margin: 1.0rem 1.0rem;
     position: relative;
     overflow: hidden;
     border-radius: 6px;
@@ -29,6 +31,6 @@
 
 .block-tout:hover {
     .block-tout-headline {
-        padding-bottom: 2rem;
+        padding-bottom: 1.5rem;
     }
 }

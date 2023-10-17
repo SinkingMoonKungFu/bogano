@@ -26,6 +26,14 @@ export const LearnHistory = {
   },
 };
 
+export const Donate = {
+  args: {
+    text: "Donate to Our Nonprofit",
+    image: "/images/tout-donate.png",
+    link: "/donate",
+  },
+};
+
 export const Join = {
   args: {
     text: "Join Us for Class",
