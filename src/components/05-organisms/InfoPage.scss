@@ -1,0 +1,53 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/fonts';
+
+.info-page {
+    max-width: 80em;
+    margin: 0 auto;
+    padding: 1rem;
+
+    .infopage-title {
+        color: $tundora;
+        padding: 1rem 0 0.5rem;
+        margin: 0;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 3rem;
+            height: 0.5rem;
+            bottom: 0;
+            background: #a5a5a5;
+        }
+    }
+
+    .infoSection-withSidebar {
+        flex-direction: row;
+        display: flex;
+        margin: 0 auto;
+        max-width: 80em;
+        padding: 1rem 0;
+
+        .textContent {
+            padding-right: 1em;
+            width: 70%;
+
+            *:first-child {
+                margin-top: 1rem;
+            }
+
+            .textContent-image {
+                border-radius: 6px;
+                height: auto;
+                margin-bottom: 1rem;
+                max-width: 100%;
+            }
+        }
+
+        .sidebar {
+            width: 25em;
+        }
+    }
+}
