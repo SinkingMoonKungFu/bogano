@@ -1,10 +1,4 @@
-import { useState } from 'react'
-import { HeaderBar } from './components/02-molecules/HeaderBar';
-import { HeroBlock } from './components/02-molecules/HeroBlock';
-import { SitemapFooter } from './components/03-cells/SitemapFooter';
-import { BlockToutList } from './components/02-molecules/BlockToutList';
-
-import './App.scss'
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const topMenu = [
   {
@@ -12,55 +6,55 @@ const topMenu = [
     subMenu: [
       {
         title: "History & Mission",
-        link: "https://www.sinkingmoon.com/mission",
+        link: "/mission",
       },
       {
         title: "Instructors & Staff",
-        link: "https://www.sinkingmoon.com/instructors",
+        link: "/instructors",
       },
       {
         title: "Philosophy & Ethics",
-        link: "https://www.sinkingmoon.com/philosophy",
+        link: "/philosophy",
       },
       {
         title: "Curriculum",
-        link: "https://www.sinkingmoon.com/curriculum",
+        link: "/curriculum",
       },
       {
         title: "Belt Rankings",
-        link: "https://www.sinkingmoon.com/ranks",
+        link: "/ranks",
       },
       {
         title: "Class Rules",
-        link: "https://www.sinkingmoon.com/rules",
+        link: "/rules",
       },
       {
         title: "FAQ",
-        link: "https://www.sinkingmoon.com/faq",
+        link: "/faq",
       },
     ],
-    },
-    {
+  },
+  {
     title: "Pricing",
-    link: "https://www.sinkingmoon.com/pricing",
-    },
-    {
+    link: "/pricing",
+  },
+  {
     title: "Class Schedule",
-    link: "https://www.sinkingmoon.com/classes",
-    },
-    {
+    link: "/classes",
+  },
+  {
     title: "Contact Us",
     subMenu: [
       {
         title: "General Contact",
-        link: "https://www.sinkingmoon.com/contact",
+        link: "/contact",
       },
       {
         title: "Prospective Students",
-        link: "https://www.sinkingmoon.com/students/prospectives",
+        link: "/students/prospectives",
       },
     ],
-    }
+  },
 ];
 
 const sitemap = [
@@ -69,29 +63,21 @@ const sitemap = [
     links: [
       {
         title: "History & Mission",
-        link: "https://www.sinkingmoon.com/mission",
+        link: "/mission",
       },
       {
         title: "Instructors & Staff",
-        link: "https://www.sinkingmoon.com/instructors",
+        link: "/instructors",
       },
       {
         title: "Philosophy & Ethics",
-        link: "https://www.sinkingmoon.com/philosophy",
+        link: "/philosophy",
       },
     ],
   },
   {
     categoryTitle: "Learn",
     links: [
-      {
-        title: "Become a Member",
-        link: "/join",
-      },
-      {
-        title: "Pricing",
-        link: "/pricing",
-      },
       {
         title: "Class Rules",
         link: "/rules",
@@ -105,6 +91,23 @@ const sitemap = [
         link: "/curriculum",
       },
       {
+        title: "FAQ",
+        link: "/faq",
+      },
+    ],
+  },
+  {
+    categoryTitle: "Join",
+    links: [
+      {
+        title: "Become a Member",
+        link: "/join",
+      },
+      {
+        title: "Pricing",
+        link: "/pricing",
+      },
+      {
         title: "Belt Rankings",
         link: "/ranks",
       },
@@ -112,11 +115,7 @@ const sitemap = [
         title: "Rank Requirements",
         link: "/requirements",
       },
-      {
-        title: "FAQ",
-        link: "/faq",
-      },
-    ],
+    ]
   },
   {
     categoryTitle: "Support",
@@ -140,62 +139,48 @@ const sitemap = [
     links: [
       {
         title: "General Contact",
-        link: "https://www.sinkingmoon.com/contact",
+        link: "/contact",
       },
       {
         title: "Prospective Students",
-        link: "https://www.sinkingmoon.com/students/prospectives",
+        link: "/students/prospectives",
       },
     ],
   },
 ];
 
-const blockTouts = [
-  {
-    text: "Meet our instructors",
-    image: "/images/instructor-tout.png",
-    link: "/instructors",
-  },
-  {
-    text: "Learn About our History and Mission",
-    image: "/images/history-tout.png",
-    link: "/mission",
-  },
-  {
-    text: "Donate to Our Nonprofit",
-    image: "/images/tout-donate.png",
-    link: "/donate",
-  },
-  {
-    text: "Join Us for Class",
-    image: "/images/join-tout.png",
-    link: "/students/prospective",
-  },
-];
+const pages = import.meta.glob("./pages/**/*.jsx", { eager: true });
 
-function App() {
-  return (
-    <>
-      <HeaderBar
-        menu={topMenu} />
-      <main role="main">
-        <HeroBlock
-          image="/images/wudang.jpg"
-          imageAlt="Wudang Mountain, China"
-          tagline="Martial arts, without egos or intimidation"
-          address="13755 Nicollet Ave Suite 203 Burnsville, MN 55337"
-          addressLink="https://maps.app.goo.gl/jESujkKdHnnnJ2y79"
-        />
-        <BlockToutList blockTouts={blockTouts} />
-      </main>
-      <SitemapFooter
-        logoTitle={"Sinking Moon School of Kung Fu"}
-        copyrightInfo={"© Copyright 2023 Sinking Moon School of Kung Fu. All rights reserved."}
-        logoLink={"/"}
-        imageAcknowledgementsLink={"/acknowledgements"}
-        sitemap={sitemap} />
-    </>
-  )
+const routes = [];
+for (const path of Object.keys(pages)) {
+  const fileName = path.match(/\.\/pages\/(.*)\.jsx$/)?.[1];
+  if (!fileName) {
+    continue;
+  }
+
+  const normalizedPathName = fileName.includes("$")
+    ? fileName.replace("$", ":")
+    : fileName.replace(/\/index/, "");
+
+  routes.push({
+    path: fileName === "index" ? "/" : `/${normalizedPathName.toLowerCase()}`,
+    Element: pages[path].default,
+    loader: pages[path]?.loader,
+    action: pages[path]?.action,
+    ErrorBoundary: pages[path]?.ErrorBoundary,
+  });
 }
 
-export default App
+const router = createBrowserRouter(
+  routes.map(({ Element, ErrorBoundary, ...rest }) => ({
+    ...rest,
+    element: <Element menu={topMenu} sitemap={sitemap} />,
+    ...(ErrorBoundary && { errorElement: <ErrorBoundary /> }),
+  }))
+);
+
+const App = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default App;

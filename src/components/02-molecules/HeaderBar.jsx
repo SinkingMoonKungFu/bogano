@@ -21,7 +21,7 @@ export const HeaderBar = ({ ...props }) => {
 
     return (
         <header className="main-header" role="banner">
-            <Logo textmark={true} logoTitle={"Sinking Moon School of Kung Fu"} link={"https://www.sinkingmoon.com"} />
+            <Logo textmark={true} logoTitle={"Sinking Moon School of Kung Fu"} link={"/"} />
             {headerMenu}
         </header>
     );
