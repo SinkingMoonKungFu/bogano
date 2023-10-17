@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { HeaderBar } from '../02-molecules/HeaderBar';
+import { SitemapFooter } from '../03-cells/SitemapFooter';
 
 import './InfoPage.scss';
 
@@ -30,6 +31,15 @@ export const InfoPage = ({...props}) => {
                         <div className="sidebar"></div>
                     </section>
                 </div>
+                <SitemapFooter
+                    logoTitle={"Sinking Moon School of Kung Fu"}
+                    copyrightInfo={
+                        "© Copyright 2023 Sinking Moon School of Kung Fu. All rights reserved."
+                    }
+                    logoLink={"/"}
+                    imageAcknowledgementsLink={"/acknowledgements"}
+                    sitemap={props.sitemap}
+                />
             </main>
         </>
     );

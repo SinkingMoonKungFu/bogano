@@ -1,6 +1,10 @@
 @import '../../assets/scss/colors';
 @import '../../assets/scss/fonts';
 
+main[role="main"] {
+    overflow-y: scroll;
+}
+
 .info-page {
     max-width: 80em;
     margin: 0 auto;

@@ -29,7 +29,7 @@ export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
         renderedMenuItems.push(<Dropdown.Header>{menuItem.title}</Dropdown.Header>);
         renderedMenuItems.push(subMenu);
       } else {
-        const renderedSubMenu = <Dropdown.Menu>{subMenu}</Dropdown.Menu>;
+        const renderedSubMenu = <Dropdown.Menu className="dropdown-menu-smskf">{subMenu}</Dropdown.Menu>;
 
         renderedMenuItems.push(
           <Dropdown className="plain-dropdown">
