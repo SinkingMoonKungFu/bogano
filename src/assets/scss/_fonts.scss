@@ -53,3 +53,11 @@ h6 {
 .bold {
     font-weight: bold;
 }
+
+a {
+    text-decoration: none;
+
+    &:hover {
+        color: $ronchi;
+    }
+}
