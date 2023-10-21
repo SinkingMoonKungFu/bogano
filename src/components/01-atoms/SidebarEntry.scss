@@ -5,6 +5,9 @@
     display: flex;
     transition: all 0.2s ease;
     text-decoration: none;
+    h2 {
+        color: $scorpion;
+    }
 
     &:hover {
         color: $ronchi;

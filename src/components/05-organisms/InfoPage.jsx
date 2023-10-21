@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { HeaderBar } from '../02-molecules/HeaderBar';
+import { Sidebar } from '../02-molecules/Sidebar';
 import { SitemapFooter } from '../03-cells/SitemapFooter';
 
 import './InfoPage.scss';
@@ -17,19 +18,26 @@ export const InfoPage = ({...props}) => {
         });
     }
 
+    let sidebar = "";
+    if (props.sidebar) {
+        sidebar = (
+            <Sidebar {...props.sidebar} />
+        )
+    }
+
     return (
         <>
             <HeaderBar menu={props.menu} />
             <main role="main">
                 <div className="info-page">
                     <h1 className="infopage-title">{props.title}</h1>
-                    <section className="infoSection-withSidebar">
+                    <section className={props.sidebar ? "infoSection withSidebar" : "infoSection noSidebar"}>
                         <div className="textContent">
                             {topLevelParagraphs}
                             <img className="textContent-image" src={props.mainImage} alt={`${props.title} Image`}></img>
                             {props.children}
                         </div>
-                        <div className="sidebar"></div>
+                        { sidebar }
                     </section>
                 </div>
                 <SitemapFooter
@@ -50,6 +58,7 @@ InfoPage.PropTypes = {
     title: PropTypes.string,
     menu: PropTypes.array,
     topParagraphs: PropTypes.array,
+    sitemap: PropTypes.array,
 };
 
 InfoPage.defaultProps = {
