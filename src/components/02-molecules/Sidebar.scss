@@ -1,0 +1,32 @@
+@import "../../assets/scss/fonts";
+@import "../../assets/scss/colors";
+
+section.sidebar {
+    padding: 0 0 0 1rem;
+    width: 25rem;
+
+    h2.section-title {
+        position: relative;
+        color: $tundora;
+        margin-bottom: 1.5rem;
+        font-size: 18pt;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2rem;
+            height: 0.3rem;
+            top: 30px;
+            left: 1px;
+            background: $silver-chalice;
+        }
+    }
+
+    ul.block-list {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+}
