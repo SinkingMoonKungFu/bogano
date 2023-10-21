@@ -32,8 +32,55 @@ function InstructorsPage(props) {
       "Lao Shi Scott has a wife (Amy), a daughter (Autumn), and a son (Quinn), all of whom he adores. Scott is an accomplished Computer Scientist, holding Bachelor's Degrees in Computer Science and Mathematics and a Master's Degree in Computer Science. During the winter months, Scott works as a hockey official for USAHockey Minnesota districts 6 and 8, as well as the Minnesota State High School League. In what little free time he has, Lao Shi Scott enjoys sailing.",
     ];
 
+    const sidebar = {
+      title: "Additional Information",
+      entries: [
+        {
+          title: "Instructors & Staff",
+          image: "/images/saam.png",
+          excerpt:
+            "Meet the instructors and staff members of the Sinking Moon School of Kung Fu",
+          link: "/instructors",
+        },
+        {
+          title: "Curriculum",
+          image: "/images/curriculum.png",
+          excerpt:
+            "An overview of what we teach and our methodology",
+          link: "/curriculum",
+        },
+        {
+          title: "Class Rules",
+          image: "/images/whistle.png",
+          excerpt:
+            "A list of rules to follow while participating at the Sinking Moon School of Kung Fu",
+          link: "/rules",
+        },
+        {
+          title: "Belt Ranks",
+          image: "/images/belts-small.png",
+          excerpt:
+            "Take a look at our belt rankings and the symbolism behind them",
+          link: "/ranks",
+        },
+        {
+          title: "Pricing",
+          image: "/images/coins-small.png",
+          excerpt:
+            "View our student pricing schedule for information on our class and equipment costs",
+          link: "/pricing",
+        }
+      ],
+    };
+
     return (
-        <InfoPage title={title} mainImage={mainImage} topParagraphs={topParagraphs} menu={props.menu} sitemap={props.sitemap}>
+        <InfoPage
+            title={title}
+            mainImage={mainImage}
+            topParagraphs={topParagraphs}
+            menu={props.menu}
+            sidebar={sidebar}
+            sitemap={props.sitemap}>
             <section className="subsection">
                 <h3>Staff Member Category Definitions</h3>
                 <p>At the Sinking Moon School of Kung Fu, we have several different categories of staff member, depending on how active a given individual is in the day-to-day activities surrounding the organization.</p>
