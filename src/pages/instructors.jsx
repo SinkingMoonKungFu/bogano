@@ -3,6 +3,8 @@ import { InfoPage } from '../components/05-organisms/InfoPage';
 import { DefinitionList } from '../components/02-molecules/DefinitionList';
 import { InstructorProfile } from '../components/02-molecules/InstructorProfile';
 
+import { sidebar } from './about-utils';
+
 function InstructorsPage(props) {
     const title = "Instructors and Staff";
     const mainImage = "/images/instructors-hero.png";
@@ -31,47 +33,6 @@ function InstructorsPage(props) {
       "Lao Shi Scott serves as an officer (Secretary) on the Wu Chi Kung Fu Association's College of Black Belts, the governing body of the Wu Chi Kung Fu Association. He was instrumental in drafting the current Constitution and By-laws of the organization, which provides a framework for all member schools within the Wu Chi Kung Fu Association.",
       "Lao Shi Scott has a wife (Amy), a daughter (Autumn), and a son (Quinn), all of whom he adores. Scott is an accomplished Computer Scientist, holding Bachelor's Degrees in Computer Science and Mathematics and a Master's Degree in Computer Science. During the winter months, Scott works as a hockey official for USAHockey Minnesota districts 6 and 8, as well as the Minnesota State High School League. In what little free time he has, Lao Shi Scott enjoys sailing.",
     ];
-
-    const sidebar = {
-      title: "Additional Information",
-      entries: [
-        {
-          title: "Instructors & Staff",
-          image: "/images/saam.png",
-          excerpt:
-            "Meet the instructors and staff members of the Sinking Moon School of Kung Fu",
-          link: "/instructors",
-        },
-        {
-          title: "Curriculum",
-          image: "/images/curriculum.png",
-          excerpt:
-            "An overview of what we teach and our methodology",
-          link: "/curriculum",
-        },
-        {
-          title: "Class Rules",
-          image: "/images/whistle.png",
-          excerpt:
-            "A list of rules to follow while participating at the Sinking Moon School of Kung Fu",
-          link: "/rules",
-        },
-        {
-          title: "Belt Ranks",
-          image: "/images/belts-small.png",
-          excerpt:
-            "Take a look at our belt rankings and the symbolism behind them",
-          link: "/ranks",
-        },
-        {
-          title: "Pricing",
-          image: "/images/coins-small.png",
-          excerpt:
-            "View our student pricing schedule for information on our class and equipment costs",
-          link: "/pricing",
-        }
-      ],
-    };
 
     return (
         <InfoPage

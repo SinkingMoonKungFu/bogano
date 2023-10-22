@@ -25,6 +25,11 @@
                 &:hover {
                     color: $tundora;
                 }
+
+                &:active {
+                    background-color: $flame-pea;
+                    color: white;
+                }
             }
 
 
