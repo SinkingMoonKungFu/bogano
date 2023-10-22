@@ -18,7 +18,7 @@ export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
     if (menuItem.subMenu) {
       for (let subMenuItemIdx in menuItem.subMenu) {
         const subMenuItem = menuItem.subMenu[subMenuItemIdx];
-        subMenu.push(<Dropdown.Item>{subMenuItem.title}</Dropdown.Item>);
+        subMenu.push(<Dropdown.Item href={subMenuItem.link}>{subMenuItem.title}</Dropdown.Item>);
       }
     }
 

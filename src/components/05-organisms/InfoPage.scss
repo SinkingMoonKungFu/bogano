@@ -31,7 +31,6 @@ main[role="main"] {
         &.withSidebar {
             flex-direction: row;
             display: flex;
-            margin: 0 auto;
             max-width: 80em;
             padding: 1rem 0;
 
@@ -42,13 +41,13 @@ main[role="main"] {
                 .textContent-image {
                     border-radius: 6px;
                     height: auto;
-                    margin-bottom: 1rem;
+                    margin-bottom: 2rem;
                     max-width: 100%;
                 }
 
                 .subsection {
                     ul {
-                        list-style-type: georgian;
+                        list-style-type: square;
                     }
                 }
             }
@@ -69,7 +68,7 @@ main[role="main"] {
 
                 .subsection {
                     ul {
-                        list-style-type: georgian;
+                        list-style-type: square;
                     }
                 }
             }
