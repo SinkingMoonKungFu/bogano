@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://SinkingMoonKungFu.github.io/bogano",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -10,7 +11,9 @@
     "preview": "vite preview",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "chromatic": "npx chromatic --project-token=chpt_941801bdab5b763"
+    "chromatic": "npx chromatic --project-token=chpt_941801bdab5b763",
+    "predeploy": "yarn run build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "bootstrap": "^5.3.2",
@@ -39,6 +42,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.3",
     "eslint-plugin-storybook": "^0.6.14",
+    "gh-pages": "^6.0.0",
     "prop-types": "^15.8.1",
     "sass": "^1.68.0",
     "storybook": "^7.5.0-alpha.3",
