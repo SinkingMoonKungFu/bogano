@@ -61,7 +61,7 @@ const lessonTopicDefinitions = [
     "Sparring is our method of applying theoretical concepts and physical techniques in real-time against an opponent. Students at the rank of white belt are introduced to sparring through two-person drills and basic boxing in a controlled environment. Orange, yellow, and green belts are expected to extend their knowledge in boxing, as well as add the use of their feet for executing kicks. At blue, purple, red, and black belts, students are introduced to more open-hand techniques, and begin to practice the use of these techniques in a controlled combat situation.",
 ];
 
-const CurriculumPage = (props) => {
+const Page = (props) => {
     return (
         <InfoPage
             title={title}
@@ -98,4 +98,4 @@ const CurriculumPage = (props) => {
     );
 }
 
-export default CurriculumPage;
+export { Page};

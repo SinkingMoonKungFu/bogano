@@ -1,16 +1,10 @@
 import React from "react";
-// import PropTypes from "prop-types";
-import Dropdown from "react-bootstrap/Dropdown";
+import Dropdown from "react-bootstrap/cjs/Dropdown.js";
+// import Dropdown from "react-bootstrap/esm/Dropdown.js";
 import { HamburgerMenu } from "./HamburgerMenu";
-
-// import { getWindowDimensions } from "../../util/Viewport";
+import { normalizeToBasePath } from "../../util/Url";
 
 export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
-  // if (condensedMenu) {
-  //   return (<HamburgerMenu>
-  //     </HamburgerMenu>);
-  // }
-
   let renderedMenuItems = [];
   for (let menuItemIdx in menuDefinition) {
     const menuItem = menuDefinition[menuItemIdx];
@@ -18,21 +12,27 @@ export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
     if (menuItem.subMenu) {
       for (let subMenuItemIdx in menuItem.subMenu) {
         const subMenuItem = menuItem.subMenu[subMenuItemIdx];
-        subMenu.push(<Dropdown.Item href={subMenuItem.link}>{subMenuItem.title}</Dropdown.Item>);
+        const subItemLink = normalizeToBasePath(subMenuItem.link);
+        const key = `subMenu-${menuItem.title}-${subMenuItemIdx}`;
+
+        subMenu.push(<Dropdown.Item key={key} href={subItemLink}>{subMenuItem.title}</Dropdown.Item>);
       }
     }
 
     if (!menuItem.subMenu) {
-      renderedMenuItems.push(<a className="dropdown-header" href={menuItem.link}>{menuItem.title}</a>);
+        const menuItemLink = normalizeToBasePath(menuItem.link);
+        const key = `linkedMenu-${menuItem.title}`;
+        renderedMenuItems.push(<a key={key} className="dropdown-header" href={menuItemLink}>{menuItem.title}</a>);
     } else {
       if (condensedMenu) {
-        renderedMenuItems.push(<Dropdown.Header>{menuItem.title}</Dropdown.Header>);
+        let key = `menuHeader-${menuItem.title}`;
+        renderedMenuItems.push(<Dropdown.Header key={key}>{menuItem.title}</Dropdown.Header>);
         renderedMenuItems.push(subMenu);
       } else {
         const renderedSubMenu = <Dropdown.Menu className="dropdown-menu-smskf">{subMenu}</Dropdown.Menu>;
-
+        const key = `plainDropdown-${menuItem.title}`;
         renderedMenuItems.push(
-          <Dropdown className="plain-dropdown">
+          <Dropdown key={key} className="plain-dropdown">
             <Dropdown.Toggle variant="menu">{menuItem.title}</Dropdown.Toggle>
             {subMenu && renderedSubMenu}
           </Dropdown>

@@ -7,9 +7,11 @@ import './Sitemap.scss';
 
 export const Sitemap = ({...props}) => {
     let sitemapColumns = [];
-    props.sitemap.forEach((menuEntry) => {
-        sitemapColumns.push(<SitemapColumn dark={props.dark} title={menuEntry.categoryTitle} links={menuEntry.links} />);
-    });
+    if (props.sitemap) {
+        props.sitemap.forEach((menuEntry) => {
+            sitemapColumns.push(<SitemapColumn dark={props.dark} title={menuEntry.categoryTitle} links={menuEntry.links} />);
+        });
+    }
 
     return (
         <div className="sitemap">
@@ -18,7 +20,7 @@ export const Sitemap = ({...props}) => {
     );
 };
 
-Sitemap.PropTypes = {
+Sitemap.propTypes = {
     sitemap: PropTypes.array
 };
 

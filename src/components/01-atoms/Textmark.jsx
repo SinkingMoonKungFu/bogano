@@ -19,9 +19,6 @@ export const Textmark = ({ ...props }) => {
 };
 
 Textmark.propTypes = {
-  /**
-   * This is the text that will be displayed in the textmark.
-   */
   text: PropTypes.string,
 };
 

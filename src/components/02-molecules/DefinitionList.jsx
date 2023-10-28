@@ -22,7 +22,8 @@ export const DefinitionList = ({...props}) => {
     );
 };
 
-DefinitionList.PropTypes = {
+DefinitionList.propTypes = {
+    terms: PropTypes.array
 };
 
 DefinitionList.defaultProps = {

@@ -4,14 +4,18 @@ import { Logo } from '../01-atoms/Logo';
 import { Sitemap } from '../02-molecules/Sitemap';
 
 import './SitemapFooter.scss';
+import { normalizeToBasePath } from '../../util/Url';
 
 export const SitemapFooter = ({...props}) => {
+    const logoLink = normalizeToBasePath(props.logoLink);
+    const imageAckLink = normalizeToBasePath(props.imageAcknowedlegementsLink);
+
     return (
         <footer className="footer" role="sitemap">
             <div className="layout">
                 <div className="layout-oneline">
                     <div className="logo-and-copyright-container">
-                        <a class="logo-footer-link" href={props.logoLink}>
+                        <a className="logo-footer-link" href={logoLink}>
                             <Logo
                                 logoTitle={props.logoTitle}
                                 textmark={true}
@@ -19,7 +23,7 @@ export const SitemapFooter = ({...props}) => {
                         </a>
                         <div className="copyright">
                             <p>{props.copyrightInfo}</p>
-                            <p><a href={props.imageAcknowledgementsLink}>Image and Copyright Acknowledgements</a></p>
+                            <p><a href={imageAckLink}>Image and Copyright Acknowledgements</a></p>
                         </div>
                     </div>
                     <Sitemap sitemap={props.sitemap} dark={true} />
@@ -29,7 +33,7 @@ export const SitemapFooter = ({...props}) => {
     );
 };
 
-SitemapFooter.PropTypes = {
+SitemapFooter.propTypes = {
     copyrightInfo: PropTypes.string,
     imageAcknowedlegementsLink: PropTypes.string,
 };

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { IoIosPin } from 'react-icons/io';
+import { IoIosPin } from 'react-icons/io/index.js';
 
 import './HeroHeadline.scss';
 

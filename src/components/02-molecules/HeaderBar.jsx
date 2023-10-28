@@ -8,10 +8,10 @@ import { Logo } from '../01-atoms/Logo';
 import "./HeaderBar.scss";
 
 export const HeaderBar = ({ ...props }) => {
-    const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions());
+    const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions(props.window));
     React.useEffect(() => {
         function handleResize() {
-            setWindowDimensions(getWindowDimensions());
+            setWindowDimensions(getWindowDimensions(props.window));
         }
 
         window.addEventListener('resize', handleResize)

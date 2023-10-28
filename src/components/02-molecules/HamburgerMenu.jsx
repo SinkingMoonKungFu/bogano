@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
-import Dropdown from 'react-bootstrap/Dropdown';
-import { BiMenu } from 'react-icons/bi';
+import Dropdown from "react-bootstrap/cjs/Dropdown.js";
+// import Dropdown from 'react-bootstrap/Dropdown';
+import biMenu from "../../assets/bi-menu.svg";
+// import { BiMenu } from "react-icons/bi";
 
 import './HamburgerMenu.scss';
 
+// const { BiMenu } = import
 
 
 // The forwardRef is important!!
@@ -18,7 +21,8 @@ const HamburgerToggle = React.forwardRef(({ children, onClick }, ref) => (
             onClick(e);
           }}
     >
-        <BiMenu />
+        {/* <BiMenu /> */}
+        <img src={biMenu} />
     </div>
 ));
 

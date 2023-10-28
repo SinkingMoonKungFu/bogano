@@ -37,7 +37,12 @@ export const InstructorProfile = ({...props}) => {
     );
 };
 
-InstructorProfile.PropTypes = {
+InstructorProfile.propTypes = {
+    biography: PropTypes.array,
+    roles: PropTypes.array,
+    image: PropTypes.string,
+    title: PropTypes.string,
+    name: PropTypes.string,
 };
 
 InstructorProfile.defaultProps = {

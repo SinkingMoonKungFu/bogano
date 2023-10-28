@@ -6,11 +6,12 @@
     display: flex;
     flex-direction: row;
     font-family: "Alegreya", serif;
-    font-weight: 600;
     justify-content: space-between;
     padding: .5rem 0;
-    padding-right: 100px;
     width: 100%;
+    box-sizing: border-box;
+    font: 100%/1.5 "Alegreya", serif;
+    font-weight: 600;
 
     .menus {
             display: flex;
@@ -45,8 +46,22 @@
                 vertical-align: middle;
             }
     }
+}
 
-    @media only screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
+    .main-header {
+        padding-right: 1rem;
+
+        .logo-link {
+            .logo-container {
+                .inline-textmark-container {
+                    h3.textmark {
+                        font-size: 7pt;
+                    }
+                }
+            }
+        }
+
         .menus {
             flex-direction: column;
             gap: none;
@@ -69,16 +84,21 @@
             }
         }
     }
+}
 
-    @media only screen and (min-width: 601px) {
+@media only screen and (min-width: 601px) {
+    .main-header {
+        padding-right: 100px;
+
         .menus {
-            flex-direction: row;
-            gap: 1.25rem;
+                flex-direction: row;
+                gap: 1.25rem;
 
-            .dropdown-header, .dropdown-toggle {
-                font-size: 14pt;
+                .dropdown-header,
+                .dropdown-toggle {
+                    font-size: 14pt;
+                }
             }
-        }
     }
 }
 

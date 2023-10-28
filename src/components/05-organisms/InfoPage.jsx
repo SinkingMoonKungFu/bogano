@@ -6,6 +6,7 @@ import { Sidebar } from '../02-molecules/Sidebar';
 import { SitemapFooter } from '../03-cells/SitemapFooter';
 
 import './InfoPage.scss';
+import { normalizeToBasePath } from '../../util/Url';
 
 export const InfoPage = ({...props}) => {
     let topLevelParagraphs = [];
@@ -25,16 +26,18 @@ export const InfoPage = ({...props}) => {
         )
     }
 
+    const mainImage = normalizeToBasePath(props.mainImage);
+
     return (
         <>
-            <HeaderBar menu={props.menu} />
+            <HeaderBar menu={props.menu} window={props.window} />
             <main role="main">
                 <div className="info-page">
                     <h1 className="infopage-title">{props.title}</h1>
                     <section className={props.sidebar ? "infoSection withSidebar" : "infoSection noSidebar"}>
                         <div className="textContent">
                             {topLevelParagraphs}
-                            <img className="textContent-image" src={props.mainImage} alt={`${props.title} Image`}></img>
+                            <img className="textContent-image" src={mainImage} alt={`${props.title} Image`}></img>
                             {props.children}
                         </div>
                         { sidebar }

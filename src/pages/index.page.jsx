@@ -29,10 +29,10 @@ const blockTouts = [
   },
 ];
 
-function LandingPage(props) {
+function Page(props) {
   return (
     <>
-      <HeaderBar menu={props.menu} />
+      <HeaderBar menu={props.menu}  window={props.window} />
       <main role="main">
         <HeroBlock
           image="/images/wudang.jpg"
@@ -56,4 +56,4 @@ function LandingPage(props) {
   );
 }
 
-export default LandingPage;
+export { Page };

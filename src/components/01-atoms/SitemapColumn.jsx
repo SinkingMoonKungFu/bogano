@@ -2,15 +2,17 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './SitemapColumn.scss';
+import { normalizeToBasePath } from '../../util/Url';
 
 export const SitemapColumn = ({...props}) => {
     let links = [];
     if (props.links) {
         props.links.forEach((linkVal, index) => {
+            const link = normalizeToBasePath(linkVal.link);
             const linkKey = `${linkVal.title}-${index}`;
             links.push((
                 <li key={linkKey}>
-                    <a href={linkVal.link}>{linkVal.title}</a>
+                    <a href={link}>{linkVal.title}</a>
                 </li>
             ));
         });
@@ -25,8 +27,9 @@ export const SitemapColumn = ({...props}) => {
         </>
     );
 
+    const singleLink = normalizeToBasePath(props.link);
     const singleLinkVariant = (
-        <a href={props.link}><h5>{props.title}</h5></a>
+        <a href={singleLink}><h5>{props.title}</h5></a>
     )
 
     let classNames = ['sitemap-column'];
@@ -41,9 +44,10 @@ export const SitemapColumn = ({...props}) => {
     );
 };
 
-SitemapColumn.PropTypes = {
+SitemapColumn.propTypes = {
     title: PropTypes.string,
-    links: PropTypes.array
+    links: PropTypes.array,
+    link: PropTypes.string,
 };
 
 SitemapColumn.defaultProps = {

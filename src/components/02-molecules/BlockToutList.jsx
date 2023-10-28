@@ -7,9 +7,9 @@ import './BlockToutList.scss';
 export const BlockToutList = ({...props}) => {
     let blockTouts = [];
     if (props.blockTouts) {
-        props.blockTouts.forEach((nextTout) => {
+        props.blockTouts.forEach((nextTout, index) => {
             blockTouts.push((
-                <li>
+                <li key={`blockToutList-${nextTout.text.replace(" ", "")}-${index}`}>
                     <BlockTout text={nextTout.text} link={nextTout.link} image={nextTout.image} />
                 </li>
             ));
@@ -23,7 +23,7 @@ export const BlockToutList = ({...props}) => {
     );
 };
 
-BlockToutList.PropTypes = {
+BlockToutList.propTypes = {
     blockTouts: PropTypes.array
 };
 

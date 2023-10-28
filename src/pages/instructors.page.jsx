@@ -5,7 +5,7 @@ import { InstructorProfile } from '../components/02-molecules/InstructorProfile'
 
 import { sidebar } from './about-utils';
 
-function InstructorsPage(props) {
+function Page(props) {
     const title = "Instructors and Staff";
     const mainImage = "/images/instructors-hero.png";
     const topParagraphs = [
@@ -61,4 +61,4 @@ function InstructorsPage(props) {
     );
 }
 
-export default InstructorsPage;
+export { Page };
