@@ -8,7 +8,7 @@ on:
 
 jobs:
   build:
-    name: Deploy
+    name: Build and Deploy
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -28,7 +28,7 @@ jobs:
         uses: borales/actions-yarn@v4
         with:
           cmd: build # will run `yarn build` command
-      - name: Deploy to Github Pages
-        uses: borales/actions-yarn@v4
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
-          cmd: deploy # will run `yarn deploy` command
+          folder: dist/client # The folder the action should deploy.
