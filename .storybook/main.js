@@ -9,7 +9,9 @@ const config = {
   ],
   framework: {
     name: "@storybook/react-vite",
-    options: {},
+    options: {
+      baseUrl: "/",
+    },
   },
   docs: {
     autodocs: "tag",

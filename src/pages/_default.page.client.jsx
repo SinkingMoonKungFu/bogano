@@ -169,7 +169,6 @@ async function render(pageContext) {
     ...pageProps
   };
 
-  console.log(Page);
   hydrateRoot(
     root,
     <PageShell pageContext={pageContext}>
