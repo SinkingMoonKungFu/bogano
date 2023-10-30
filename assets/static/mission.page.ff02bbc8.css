@@ -1,0 +1,1 @@
+.layout-two-side-by-side{align-items:center;display:flex;flex-direction:row}.layout-two-side-by-side *{flex:2 2 50%}.layout-two-side-by-side .directions{flex:1 1 25%;margin-left:1rem}
