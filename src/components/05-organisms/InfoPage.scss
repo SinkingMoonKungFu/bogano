@@ -76,20 +76,24 @@ main[role="main"] {
     }
 }
 
-.subsection-title {
-    margin-top: 0 !important;
-    margin: 0 0 1rem 0;
-    position: relative;
-    color: $tundora;
+.subsection {
+    margin-bottom: 2rem;
 
-    &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        width: 2.2rem;
-        height: 0.2rem;
-        top: 30px;
-        left: 1px;
-        background: $silver-chalice;
+    .subsection-title {
+        margin-top: 0 !important;
+        margin: 0 0 1rem 0;
+        position: relative;
+        color: $tundora;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2.2rem;
+            height: 0.2rem;
+            top: 30px;
+            left: 1px;
+            background: $silver-chalice;
+        }
     }
 }
