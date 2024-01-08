@@ -13,6 +13,13 @@ if (process.env.APP_ENV !== "development") {
 export default defineConfig({
   plugins: plugins,
   base: `${BASE_URL}`,
+  server: {
+    host: true,
+    port: 8000,
+    watch: {
+      usePolling: true,
+    },
+  },
   define: {
     // By default, Vite doesn't include shims for NodeJS/
     // necessary for segment analytics lib to work
