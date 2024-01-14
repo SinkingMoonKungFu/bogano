@@ -1,0 +1,99 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/fonts';
+
+// * {
+//     color: black;
+// }
+table.requirements {
+    border-collapse: collapse;
+    border-spacing: 0;
+    border: 1px solid #808080;
+    position: relative;
+    width: 100%;
+
+    * {
+        color: black;
+    }
+
+    &::after {
+        margin: auto auto;
+        content: '';
+        background: url(/images/logo.svg) no-repeat center center;
+        opacity: 0.2;
+        top: 10%;
+        left: 0;
+        right: 0;
+        width: 150em;
+        height: 100em;
+        position: absolute;
+        z-index: -1;
+    }
+
+    tbody {
+        display: table-row-group;
+        vertical-align: middle;
+        border-color: inherit;
+
+        tr {
+            border-color: inherit;
+            display: table-row;
+            vertical-align: inherit;
+
+            th.empty-cell {
+                background-color: white;
+                border: none;
+            }
+
+            th.title-row {
+                text-align: center;
+            }
+
+            th {
+                background-color: rgba(254, 246, 225, 0.6);
+                border: 1px solid #808080;
+                display: table-cell;
+                font: 100%/1.5 "Aclonica", sans-serif;
+                line-height: 1.2;
+                padding: 0.2em;
+                padding-left: 1em;
+                padding-right: 1em;
+                text-shadow: 2px 2px 5px #808080;
+                vertical-align: inherit;
+            }
+
+            &:nth-child(2n) {
+                td {
+                    background-color: $white-60pct;
+                }
+            }
+
+            &:nth-child(2n+1) {
+                td {
+                    background-color: $foam-60pct;
+                }
+            }
+
+            td {
+                border: 1px solid #808080;
+                min-width: 25em;
+                vertical-align: top;
+                padding: 1em 1em 1em 1em;
+            }
+        }
+    }
+}
+
+.revision-annotation {
+    bottom: 0;
+    position: fixed;
+    right: 0;
+    font-size: 8pt;
+    text-align: right;
+}
+
+ul {
+    li.requirements-list-single-item {
+        list-style-type: square;
+        margin-left: 1em;
+    }
+}

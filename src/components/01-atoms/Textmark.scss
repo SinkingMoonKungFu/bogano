@@ -1,0 +1,30 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Aclonica', sans-serif;
+}
+
+.textmark {
+    color: black;
+    text-shadow: 4px 4px 5px #808080;
+    line-height: 1.2;
+    padding-left: .5rem;
+}
+
+.alternate {
+    color: white;
+    text-shadow: 4px 4px 5px black;
+    max-width: 200px;
+}
+
+@media only screen and (max-width: 600px) {
+    .textmark {
+        font-size: 8pt;
+        max-width: 7rem;
+    }
+}
+
+@media only screen and (min-width: 601px) {
+    .textmark {
+        font-size: 1.5em;
+        max-width: 11em;
+    }
+}

@@ -1,0 +1,32 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/fonts';
+
+li.rule-listing {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    color: $light-gray;
+
+    .numeral {
+        min-width: 1em;
+        font: bold italic 45px/1.5 Helvetica, Verdana, sans-serif;
+    }
+
+    .rule-text-container {
+        display: flex;
+        flex-direction: column;
+
+        * {
+            padding-left: 60px;
+        }
+
+        .rule-title {
+            font: 12pt/1.5 "Helvetica", sans-serif;
+            font-weight: bold;
+            color: $mine-shaft;
+            font-weight: bold;
+        }
+    }
+}
