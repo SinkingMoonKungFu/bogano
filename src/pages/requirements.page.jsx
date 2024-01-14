@@ -1,8 +1,8 @@
 import { RequirementsChart } from "../components/05-organisms/RequirementsChart";
-function Page(props) {
+function RequirementsPage(props) {
     return (
             <RequirementsChart />
     );
 }
 
-export { Page }
+export default RequirementsPage;

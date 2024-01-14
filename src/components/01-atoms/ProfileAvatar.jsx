@@ -15,7 +15,7 @@ export const ProfileAvatar = ({...props}) => {
     );
 };
 
-ProfileAvatar.PropTypes = {
+ProfileAvatar.propTypes = {
     image: PropTypes.string,
     name: PropTypes.string,
 };

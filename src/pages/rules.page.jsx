@@ -74,7 +74,7 @@ const rules = [
     }
 ]
 
-function Page(props) {
+function RulesPage(props) {
    return (
         <>
             <InfoPage
@@ -95,4 +95,4 @@ function Page(props) {
     );
 }
 
-export { Page };
+export default RulesPage;

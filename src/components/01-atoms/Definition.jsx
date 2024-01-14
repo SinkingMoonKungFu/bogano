@@ -12,7 +12,7 @@ export const Definition = ({...props}) => {
     );
 };
 
-Definition.PropTypes = {
+Definition.propTypes = {
     term: PropTypes.string,
     definition: PropTypes.string,
     marker: PropTypes.bool,

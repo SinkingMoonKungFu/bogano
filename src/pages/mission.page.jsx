@@ -14,7 +14,7 @@ const topParagraphs = [
     "The Sinking Moon School of Kung Fu is a chartered member school of the Wu Chi Kung Fu Association. Our regular instruction staff are fully certified members of the Wu Chi Kung Fu Association's College of Black Belts."
 ];
 
-function Page(props) {
+function MissionPage(props) {
    return (
         <>
             <InfoPage
@@ -53,4 +53,4 @@ function Page(props) {
     );
 }
 
-export { Page };
+export default MissionPage;

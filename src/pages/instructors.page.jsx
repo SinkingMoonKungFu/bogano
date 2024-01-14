@@ -1,11 +1,11 @@
-import React from 'react';
+// import React from 'react';
 import { InfoPage } from '../components/05-organisms/InfoPage';
 import { DefinitionList } from '../components/02-molecules/DefinitionList';
 import { InstructorProfile } from '../components/02-molecules/InstructorProfile';
 
 import { sidebar } from './about-utils';
 
-function Page(props) {
+function InstructorsPage(props) {
     const title = "Instructors and Staff";
     const mainImage = "/images/instructors-hero.png";
     const topParagraphs = [
@@ -61,4 +61,4 @@ function Page(props) {
     );
 }
 
-export { Page };
+export default InstructorsPage;

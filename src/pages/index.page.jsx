@@ -4,6 +4,8 @@ import { HeroBlock } from "../components/02-molecules/HeroBlock";
 import { SitemapFooter } from "../components/03-cells/SitemapFooter";
 import { BlockToutList } from "../components/02-molecules/BlockToutList";
 
+import { topMenu } from "../data/TopMenu";
+import { sitemap } from "../data/Sitemap";
 import "./index.scss";
 
 const blockTouts = [
@@ -29,31 +31,31 @@ const blockTouts = [
   },
 ];
 
-function Page(props) {
+function IndexPage() {
   return (
     <>
-      <HeaderBar menu={props.menu}  window={props.window} />
-      <main role="main">
-        <HeroBlock
-          image="/images/wudang.jpg"
-          imageAlt="Wudang Mountain, China"
-          tagline="Martial arts, without egos or intimidation"
-          address="13755 Nicollet Ave Suite 203 Burnsville, MN 55337"
-          addressLink="https://maps.app.goo.gl/jESujkKdHnnnJ2y79"
+        <HeaderBar menu={topMenu}  window={window} />
+            <main role="main">
+                <HeroBlock
+                    image="/images/wudang.jpg"
+                    imageAlt="Wudang Mountain, China"
+                    tagline="Martial arts, without egos or intimidation"
+                    address="13755 Nicollet Ave Suite 203 Burnsville, MN 55337"
+                    addressLink="https://maps.app.goo.gl/jESujkKdHnnnJ2y79"
+                />
+                <BlockToutList blockTouts={blockTouts} />
+            </main>
+        <SitemapFooter
+            logoTitle={"Sinking Moon School of Kung Fu"}
+            copyrightInfo={
+            "© Copyright 2023 Sinking Moon School of Kung Fu. All rights reserved."
+            }
+            logoLink={"/"}
+            imageAcknowledgementsLink={"/acknowledgements"}
+            sitemap={sitemap}
         />
-        <BlockToutList blockTouts={blockTouts} />
-      </main>
-      <SitemapFooter
-        logoTitle={"Sinking Moon School of Kung Fu"}
-        copyrightInfo={
-          "© Copyright 2023 Sinking Moon School of Kung Fu. All rights reserved."
-        }
-        logoLink={"/"}
-        imageAcknowledgementsLink={"/acknowledgements"}
-        sitemap={props.sitemap}
-      />
     </>
   );
 }
 
-export { Page };
+export default IndexPage;

@@ -4,6 +4,8 @@ import Dropdown from "react-bootstrap/cjs/Dropdown.js";
 import { HamburgerMenu } from "./HamburgerMenu";
 import { normalizeToBasePath } from "../../util/Url";
 
+import "bootstrap/scss/bootstrap.scss";
+
 export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
   let renderedMenuItems = [];
   for (let menuItemIdx in menuDefinition) {
@@ -22,7 +24,7 @@ export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
     if (!menuItem.subMenu) {
         const menuItemLink = normalizeToBasePath(menuItem.link);
         const key = `linkedMenu-${menuItem.title}`;
-        renderedMenuItems.push(<a key={key} className="dropdown-header" href={menuItemLink}>{menuItem.title}</a>);
+        renderedMenuItems.push(<a key={key} className="btn dropdown-header" href={menuItemLink}>{menuItem.title}</a>);
     } else {
       if (condensedMenu) {
         let key = `menuHeader-${menuItem.title}`;
