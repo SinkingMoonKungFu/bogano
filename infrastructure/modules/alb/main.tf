@@ -9,6 +9,10 @@ resource "aws_lb_target_group" "targetGroup" {
   slow_start                    = 30 # 30 seconds
   target_type                   = "ip"
 
+  lifecycle {
+    create_before_destroy = true
+  }
+
   health_check {
     enabled             = true
     healthy_threshold   = 2

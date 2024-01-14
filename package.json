@@ -5,8 +5,8 @@
   "type": "module",
   "homepage": "https://SinkingMoonKungFu.github.io/bogano",
   "scripts": {
-    "dev": "ASSET_URL=/bogano vite dev",
-    "build": "ASSET_URL=/bogano vite build",
+    "dev": "ASSET_URL=/ vite dev",
+    "build": "ASSET_URL=/ vite build",
     "build:image": "yarn build && docker build ./ -t bogano",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",

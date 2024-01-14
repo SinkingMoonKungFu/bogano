@@ -2,7 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import vike from "vike/plugin";
 
-const BASE_URL = process.env.ASSET_URL || "";
+const BASE_URL = "/";
 const plugins = [react()];
 
 if (process.env.APP_ENV !== "development") {
@@ -15,7 +15,7 @@ export default defineConfig({
   base: `${BASE_URL}`,
   server: {
     host: true,
-    port: 80,
+    port: 8000,
     watch: {
       usePolling: true,
     },
