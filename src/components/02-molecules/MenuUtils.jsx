@@ -22,7 +22,7 @@ export const buildHeaderMenu = (menuDefinition, condensedMenu) => {
     if (!menuItem.subMenu) {
         const menuItemLink = normalizeToBasePath(menuItem.link);
         const key = `linkedMenu-${menuItem.title}`;
-        renderedMenuItems.push(<a key={key} className="dropdown-header" href={menuItemLink}>{menuItem.title}</a>);
+        renderedMenuItems.push(<a key={key} className="btn dropdown-header" href={menuItemLink}>{menuItem.title}</a>);
     } else {
       if (condensedMenu) {
         let key = `menuHeader-${menuItem.title}`;
