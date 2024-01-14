@@ -12,4 +12,14 @@ export default defineConfig({
       syncIndex: true,
     }),
   ],
+  preview: {
+    port: 8080,
+    staticPort: true,
+  },
+  server: {
+    port: 8080,
+    strictPort: true,
+    host: true,
+    origin: "http://0.0.0.0:8080",
+  },
 });

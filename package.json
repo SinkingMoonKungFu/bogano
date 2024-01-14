@@ -4,11 +4,19 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
+    "dev": "ASSET_URL=/ vite dev",
+    "build": "ASSET_URL=/ vite build",
+    "build:image": "yarn build && docker build ./ -t bogano",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "storybook": "APP_ENV=development storybook dev -p 6006",
+    "build-storybook": "APP_ENV=development storybook build",
+    "predeploy": "yarn run build",
+    "tag:image:staging": "docker tag bogano:latest 730335612047.dkr.ecr.us-east-2.amazonaws.com/bogano:staging-latest",
+    "push:image:staging": "docker push 730335612047.dkr.ecr.us-east-2.amazonaws.com/bogano:staging-latest",
+    "deploy:image:staging": "yarn build:image && yarn tag:image:staging && yarn push:image:staging"
   },
+
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
