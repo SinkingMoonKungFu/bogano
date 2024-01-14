@@ -1,0 +1,7 @@
+name: Deploy Image to ECR
+on: [push]
+
+jobs:
+  build:
+    uses: sinkingmoonkungfu/bogano/.github/workflows/build.yml@main
+    secrets: inherit
