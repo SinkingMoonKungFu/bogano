@@ -31,7 +31,7 @@ const blockTouts = [
   },
 ];
 
-function Page() {
+function IndexPage() {
   return (
     <>
         <HeaderBar menu={topMenu}  window={window} />
@@ -58,4 +58,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default IndexPage;

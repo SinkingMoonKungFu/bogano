@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import PropTypes from "prop-types";
 
 import { getWindowDimensions } from "../../util/Viewport";
@@ -8,7 +8,8 @@ import { Logo } from '../01-atoms/Logo';
 import "./HeaderBar.scss";
 
 export const HeaderBar = ({ ...props }) => {
-    const [windowDimensions, setWindowDimensions] = React.useState(getWindowDimensions(props.window));
+    const windowSize = useRef([window.innerWidth, window.innerHeight]);
+
     React.useEffect(() => {
         function handleResize() {
             setWindowDimensions(getWindowDimensions(props.window));
@@ -17,7 +18,7 @@ export const HeaderBar = ({ ...props }) => {
         window.addEventListener('resize', handleResize)
     })
 
-    let headerMenu = buildHeaderMenu(props.menu, windowDimensions.width <= 600);
+    let headerMenu = buildHeaderMenu(props.menu, windowSize[0] <= 600);
 
     return (
         <header className="main-header" role="banner">

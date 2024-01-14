@@ -57,7 +57,7 @@ export const InfoPage = ({...props}) => {
     );
 };
 
-InfoPage.PropTypes = {
+InfoPage.propTypes = {
     title: PropTypes.string,
     menu: PropTypes.array,
     topParagraphs: PropTypes.array,
