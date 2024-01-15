@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     aws = {
@@ -46,4 +45,12 @@ module "bogano_ecr_repo" {
 resource "aws_ecs_cluster" "bogano_cluster" {
   count = length(local.environments)
   name  = format("%s-%s-cluster", local.environments[count.index], local.app_name)
+}
+
+module "dh_dns" {
+  source      = "../modules/dh-dns"
+  environment = "staging"
+  alb_host    = module.applicationLoadBalancer.dns_name
+  hostname    = "bogano.sinkingmoon.com"
+  api_key     = local.dreamhost_api_key
 }

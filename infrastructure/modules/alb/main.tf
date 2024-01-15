@@ -1,5 +1,5 @@
 resource "aws_lb" "loadBalancer" {
-  name_prefix        = var.app_name
+  name_prefix        = "lb-bog"
   internal           = false
   load_balancer_type = "application"
   security_groups    = var.loadBalancerConfig.securityGroupIds
@@ -30,11 +30,11 @@ resource "aws_lb_listener" "albTargetListener" {
 }
 
 resource "aws_lb_target_group" "targetGroup" {
-  count    = length(var.environments)
-  name     = format("%s-%s-tg", var.environments[count.index], var.app_name)
-  port     = var.port
-  protocol = "HTTP"
-  vpc_id   = var.vpcId
+  count       = length(var.environments)
+  name_prefix = substr(format("tg-%s", var.app_name), 0, 5)
+  port        = var.port
+  protocol    = "HTTP"
+  vpc_id      = var.vpcId
 
   load_balancing_algorithm_type = "round_robin"
   slow_start                    = 30 # 30 seconds

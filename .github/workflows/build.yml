@@ -1,24 +1,24 @@
-name: Build
+# name: Build
 
-on:
-  workflow_call:
-    # inputs:
-    #   config-path:
-    #     required: true
-    #     type: string
-    # secrets:
-    #   envPAT:
-    #     required: true
+# on:
+#   workflow_call:
+# jobs:
+#   build:
+#     name: "Build Image (Staging)"
+#     runs-on: ubuntu-latest
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v4
-      - name: Use Node.js 18.19.0
-        uses: actions/setup-node@v3
-        with:
-          node-version: "18.19.0"
-      - run: yarn install
-      - run: yarn run build
+#     steps:
+#       - uses: actions/checkout@v4
+#       - name: Use Node.js 18.19.0
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "18.19.0"
+#       - run: yarn install
+#       - run: yarn run build:image
+#       - run: yarn run tag:image:staging
+#       - name: Archive Docker Images
+#         uses: actions/upload-artifact@v3
+#         with:
+#           name: archive-docker-images
+#           path: /var/lib/docker
+#           retention-days: 1
