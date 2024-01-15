@@ -1,0 +1,94 @@
+@import '../../assets/scss/colors';
+
+.block-beltrank-visual {
+    width: 50%;
+    margin-right: 6rem;
+    max-width: 11rem;
+
+    img.block-beltrank-image-element {
+        height: 180px;
+        max-width: initial;
+        width: 180px;
+        border-radius: 6px;
+    }
+
+    .belt {
+        margin-left: -8px;
+        margin-top: auto;
+        margin-bottom: auto;
+        width: 10em;
+        height: 2em;
+    }
+
+    .belt-overlay {
+        position: relative;
+        top: -4em;
+        z-index: 100;
+        width: 12vw;
+        left: 0;
+    }
+}
+
+.white-belt {
+    border-top: 2px dashed $white-belt-tertiary;
+    border-bottom: 2px dashed $white-belt-tertiary;
+    border-right: 2px dashed $white-belt-tertiary;
+    background: linear-gradient(to bottom, $white-belt-secondary 0%, $white-belt 10%, $white-belt 90%, $white-belt-secondary 100%);
+    box-shadow: 0 0 0 8px $white-belt-secondary;
+}
+
+.orange-belt {
+    border-top: 2px dashed $orange-belt-tertiary;
+    border-bottom: 2px dashed $orange-belt-tertiary;
+    border-right: 2px dashed $orange-belt-tertiary;
+    background: linear-gradient(to bottom, $orange-belt 0%, $orange-belt-secondary 10%, $orange-belt-secondary 90%, $orange-belt 100%);
+    box-shadow: 0 0 0 8px $orange-belt;
+}
+
+.yellow-belt {
+    border-top: 2px dashed $yellow-belt-tertiary;
+    border-bottom: 2px dashed $yellow-belt-tertiary;
+    border-right: 2px dashed $yellow-belt-tertiary;
+    background: linear-gradient(to bottom, $yellow-belt 0%, $yellow-belt-secondary 10%, $yellow-belt-secondary 90%, $yellow-belt 100%);
+    box-shadow: 0 0 0 8px $yellow-belt;
+}
+
+.green-belt {
+    border-top: 2px dashed $green-belt-tertiary;
+    border-bottom: 2px dashed $green-belt-tertiary;
+    border-right: 2px dashed $green-belt-tertiary;
+    background: linear-gradient(to bottom, $green-belt 0%, $green-belt-secondary 10%, $green-belt-secondary 90%, $green-belt 100%);
+    box-shadow: 0 0 0 8px $green-belt;
+}
+
+.blue-belt {
+    border-top: 2px dashed $blue-belt-tertiary;
+    border-bottom: 2px dashed $blue-belt-tertiary;
+    border-right: 2px dashed $blue-belt-tertiary;
+    background: linear-gradient(to bottom, $blue-belt 0%, $blue-belt-secondary 10%, $blue-belt-secondary 90%, $blue-belt 100%);
+    box-shadow: 0 0 0 8px $blue-belt;
+}
+
+.purple-belt {
+    border-top: 2px dashed $purple-belt-tertiary;
+    border-bottom: 2px dashed $purple-belt-tertiary;
+    border-right: 2px dashed $purple-belt-tertiary;
+    background: linear-gradient(to bottom, $purple-belt 0%, $purple-belt-secondary 10%, $purple-belt-secondary 90%, $purple-belt 100%);
+    box-shadow: 0 0 0 8px $purple-belt;
+}
+
+.red-belt {
+    border-top: 2px dashed $red-belt-tertiary;
+    border-bottom: 2px dashed $red-belt-tertiary;
+    border-right: 2px dashed $red-belt-tertiary;
+    background: linear-gradient(to bottom, $red-belt-secondary 0%, $red-belt 30%, $red-belt 70%, $red-belt-secondary 100%);
+    box-shadow: 0 0 0 8px $red-belt-secondary;
+}
+
+.black-belt {
+    border-top: 2px dashed $black-belt-tertiary;
+    border-bottom: 2px dashed $black-belt-tertiary;
+    border-right: 2px dashed $black-belt-tertiary;
+    background: linear-gradient(to bottom, $black-belt-secondary 0%, $black-belt 30%, $black-belt 70%, $black-belt-secondary 100%);
+    box-shadow: 0 0 0 8px $black-belt-secondary;
+}

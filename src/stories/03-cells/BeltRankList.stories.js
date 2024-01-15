@@ -1,0 +1,82 @@
+import { BeltRankList } from "../../components/03-cells/BeltRankList";
+
+export default {
+  title: "Cells/BeltRankList",
+  component: BeltRankList,
+  parameters: {
+    layout: "centered",
+  },
+  tags: ["autodocs"],
+  argTypes: {},
+};
+
+export const AllBelts = {
+  args: {
+    beltRanks: [
+      {
+        beltColor: "white",
+        element: "Blank Page",
+        descriptionParagraphs: [
+          "White Belt represents a blank page, a fresh canvas onto which can be drawn anything. It comes with no prior assumptions and no expectations of experience.",
+          "A common adage within the martial arts is that only an empty cup can be filled - one that is already partially or completely filled will simply overflow, and some of the added water will be lost. This is the only requirement of students at the rank of White Belt - that they are willing to learn what we have to teach at the Sinking Moon School of Kung Fu.",
+          "Students at White Belt are developing the first fundamentals within the art of Kung Fu. Basic strikes and kicks are learned at this rank, as well as basic form development. Some initial self-defense techniques are shown and students begin to discover how to apply their newfound skills in the sparring ring.",
+          "Upon satisfaction of the requirements at White Belt, students will be advanced to the rank of Orange Belt.",
+        ],
+      },
+      {
+        beltColor: "orange",
+        element: "Magma",
+        descriptionParagraphs: [
+          "Orange is the rank at which students have raw potential, but are unformed and unmolded. Orange represents the color of magma, which lies at the Earth's core. Magma is chaotic, unharnessed, but still has great force, especially if correctly controlled. Within it is contained the building blocks for the minerals of the earth, if they can be extracted and tempered.",
+          "Students at the rank of Orange Belt are enhancing the fundamentals they learned at White Belt. They are expected to be developing their fighting skills by putting together the basic elements they learned at White into combinations and strategies. Students should be striving to harness their potential in the sparring ring, within their forms, and in their techniques. It is expected that students at Orange will begin to bring order to chaos and develop further the raw strength required to continue on their journey in the martial arts.",
+          "Upon satisfaction of the requirements at Orange Belt, students will be advanced to rank of Yellow Belt.",
+        ],
+      },
+      {
+        beltColor: "yellow",
+        element: "Minerals",
+        descriptionParagraphs: [
+          "Yellow represents the metals and minerals of the Earth, which are the building blocks of all construction. After hardening and cooling, the core of the Earth pushes forth gold, silver, iron, copper, and a vast array of other metals and minerals. So too does a student harden over time, and sharpen his or her claws through time and trial.",
+          "At Yellow, students begin to learn more of the 'hard style' of Kung Fu - that which is the basis for some forms of Karate. Repetition, discipline, toughening, and rigorous attention to detail are key at this rank. Students must begin to find their passion within the art and develop it through constant drilling and practice. Students are expected to begin developing both speed and power in their strikes, as well as focusing on the necessary mental aspect of the art crucial to success at the higher ranks.",
+          "Upon satisfaction of the requirements at Yellow Belt, students will be advanced to the rank of Green Belt.",
+        ],
+      },
+      {
+        beltColor: "green",
+        element: "Growth",
+        descriptionParagraphs: [
+          "The rank of Green Belt represents growth. The color green is most commonly associated with the plant world, which is the common symbolism of growth in cultures around the world. Plants feed on the minerals of the Earth, and grow to conquer areas of the world that even humankind has difficulty with. They are the basis for the atmosphere of our planet, as well as much of the food we consume.",
+          "At Green Belt, students must grow within the art, and conform themselves to the demands of their studies within Kung Fu. They must grow not only physically, but also intellectually and spiritually, in order to handle the techniques in the high ranks. Students should have a solid understanding of form, and be able to execute their forms with speed, accuracy, and precision. They should strengthen their stances to become rooted to the ground when they so choose. They should also develop their intuition and flexibility in order to flex or bend when necessary.",
+          "Upon satisfaction of the requirements at Green Belt, students will be advanced to the rank of Blue Belt and initiated into the high ranks of the Sinking Moon School of Kung Fu.",
+        ],
+      },
+      {
+        beltColor: "blue",
+        element: "Water",
+        descriptionParagraphs: [
+          "Blue Belt is the beginning of the order of high ranks in the Sinking Moon School of Kung Fu. Blue is most commonly associated with water. Lakes, streams, rivers, and the ocean are all fundamental parts of life on the planet Earth. So too is the rank of Blue Belt fundamental in a student's training in Kung Fu.",
+          "Students at Blue Belt will begin learning more abstract techniques, as well as water-style forms such as the Snake and Crane style of Kung Fu. Development of how to 'flow' in a fight is crucial to success at this rank, as is the ability to overwhelm and surround one's opponent. Mental strengthening is continued, and students are expected to begin adapting to a particular style of fighting that suits their body type and personality. Students at Blue Belt will also begin taking more responsibility for leadership, and should begin learning how to teach the art of Kung Fu to others.",
+          "Upon satisfaction of the requirements at Blue Belt, students will be advanced to the rank of Purple Belt.",
+        ],
+      },
+      {
+        beltColor: "purple",
+        element: "Storm",
+        descriptionParagraphs: [
+          "The rank of purple is indicative of the highest reaches of the planet Earth: mountains, storm clouds, twilight sky, and upper atmosphere. Clouds and storms, often which are accompanied by thunder and lightning, are symbols related to this rank. The immobility of purple mountains represent a student's ability to 'hold firm' and not be moved.",
+          "Students should be focused on developing strength: to remain steadfast in one's stances, especially in the sparring ring, and be able to deflect oncoming attacks without being moved. Developing techniques of striking through one's target with percussive blows like thunder should be the goal. Reflexes and speed are critical elements to a student's success at Purple Belt, so large amounts of time should be spent at this rank practicing techniques in order to develop lightning-fast reflexes and strikes.",
+          "Upon satisfaction of the requirements at Purple Belt, students will be advanced to the rank of Red Belt.",
+        ],
+      },
+      {
+        beltColor: "red",
+        element: "Fire",
+        descriptionParagraphs: [
+          "Red Belt, at its core, represents the element of fire. The most prominent example of fire in our everyday lives is that of the sun. The sun is a giant ball of flame: all-consuming and enormous in its mass. While the sun is dangerous and indicative of fire, it is also the most abundant source of energy and warmth. Without the sun, no life would be able to survive on Earth.",
+          "Students should be developing their fire style at this rank in the form of Phoenix and/or Tiger styles of Kung Fu. Nerve strikes should be a focus for students at the rank of Red Belt, in order to target points that 'burn like fire' when successfully struck. As the sun is all-consuming, so too should the student be able to consume his or her opponent in the ring. As the sun forces the planets to rotate around it, so too should the student control his or her matches and force opponents to move around them. At this rank, students should also be perfecting their teaching skills, and assisting and helping younger students to achieve their goals.",
+          "Upon satisfaction of the requirements at Red Belt and completion of a formal test, students will be advanced to the rank of Black Belt, Yi Dan (White Sash), and recommended to the Wu Chi Kung Fu Association for admittance into the College of Black Belts.",
+        ],
+      },
+    ],
+  },
+};

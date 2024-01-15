@@ -1,3 +1,5 @@
+@use "sass:color";
+
 $alto: #D9D9D9;
 $flame-pea: #dc5b45;
 $foam: #edf7fd;
@@ -14,3 +16,29 @@ $white-60pct: rgba(255, 255, 255, 0.6);
 
 $black-half-transparent: rgba(0, 0, 0, 0.5);
 $full-transparent: rgba(0, 0, 0, 0);
+
+// Belt colors
+$white-belt: white;
+$white-belt-secondary: darken($white-belt, 10%);
+$white-belt-tertiary: darken($white-belt, 40%);
+$orange-belt: #EF9F00;
+$orange-belt-secondary: adjust-hue($orange-belt, 3);
+$orange-belt-tertiary: darken($orange-belt, 20%);
+$yellow-belt: #F2F200;
+$yellow-belt-secondary: adjust-hue($yellow-belt, 4);
+$yellow-belt-tertiary: desaturate($yellow-belt, 40%);
+$green-belt: #008402;
+$green-belt-secondary: adjust-hue($green-belt, 4);
+$green-belt-tertiary: desaturate($green-belt, 40%);
+$blue-belt: #00116B;
+$blue-belt-secondary: adjust-hue($blue-belt, 2);
+$blue-belt-tertiary: lighten($blue-belt, 40%);
+$purple-belt: #55077f;
+$purple-belt-secondary: adjust-hue($purple-belt, 2);
+$purple-belt-tertiary: lighten($purple-belt, 40%);
+$red-belt: #7C0000;
+$red-belt-secondary: darken($red-belt, 5%);
+$red-belt-tertiary: darken($red-belt, 40%);
+$black-belt: #303030;
+$black-belt-secondary: black;
+$black-belt-tertiary: white;

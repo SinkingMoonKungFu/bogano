@@ -1,0 +1,25 @@
+li.belt-rank-list-item {
+    margin-bottom: 1.5rem;
+
+    span.block-belt-rank {
+        display: flex;
+        transition: all 0.2s ease;
+
+        .block-belt-rank-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            flex: 1;
+
+            h2.block-belt-rank-title {
+                margin-bottom: 0.2em;
+                transition: all 0.2s ease;
+                font-size: 24px;
+
+                &:hover {
+                    color: #f0b250
+                }
+            }
+        }
+    }
+}
