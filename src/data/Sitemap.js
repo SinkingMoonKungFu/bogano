@@ -50,7 +50,7 @@ export const sitemap = [
       },
       {
         title: "Belt Rankings",
-        link: "/ranks",
+        link: "/belts",
       },
       {
         title: "Rank Requirements",

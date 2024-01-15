@@ -20,7 +20,7 @@ export const topMenu = [
       },
       {
         title: "Belt Rankings",
-        link: "/ranks",
+        link: "/belts",
       },
       {
         title: "Class Rules",

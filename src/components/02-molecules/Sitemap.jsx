@@ -7,9 +7,12 @@ import './Sitemap.scss';
 
 export const Sitemap = ({...props}) => {
     let sitemapColumns = [];
+    let sitemapItem = 0;
     if (props.sitemap) {
         props.sitemap.forEach((menuEntry) => {
-            sitemapColumns.push(<SitemapColumn dark={props.dark} title={menuEntry.categoryTitle} links={menuEntry.links} />);
+            const listKey = `sitemap-list-item-${sitemapItem}`;
+            sitemapItem++;
+            sitemapColumns.push(<SitemapColumn key={listKey} dark={props.dark} title={menuEntry.categoryTitle} links={menuEntry.links} />);
         });
     }
 
