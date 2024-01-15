@@ -1,9 +1,12 @@
 import React from 'react';
 
 import { InfoPage } from '../components/05-organisms/InfoPage';
-
-import { sidebar } from './about-utils';
 import { RulesList } from '../components/02-molecules/RulesList';
+
+import { sidebar } from '../data/sidebar';
+import { topMenu } from "../data/TopMenu";
+import { sitemap } from "../data/Sitemap";
+
 
 const title = "Class Rules";
 const mainImage = "/images/rules-hero.png";
@@ -81,9 +84,9 @@ function RulesPage(props) {
                 title={title}
                 mainImage={mainImage}
                 topParagraphs={topParagraphs}
-                menu={props.menu}
+                menu={topMenu}
                 sidebar={sidebar}
-                sitemap={props.sitemap}>
+                sitemap={sitemap}>
                     <section className="subsection">
                         <h3 className="subsection-title">Rules of the Sinking Moon School of Kung Fu</h3>
                         <RulesList

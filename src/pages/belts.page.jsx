@@ -1,6 +1,6 @@
 import React from "react";
 import { InfoPage } from "../components/05-organisms/InfoPage";
-import { sidebar } from './about-utils';
+import { sidebar } from '../data/sidebar';
 import beltsJson from '../data/belts.json';
 import { BeltRankList } from "../components/03-cells/BeltRankList";
 import { topMenu } from "../data/TopMenu";

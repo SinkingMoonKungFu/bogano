@@ -1,7 +1,9 @@
 import React from 'react';
 import { InfoPage } from '../components/05-organisms/InfoPage';
 import { DefinitionList } from '../components/02-molecules/DefinitionList';
-import { sidebar } from './about-utils';
+import { sidebar } from '../data/sidebar';
+import { topMenu } from "../data/TopMenu";
+import { sitemap } from "../data/Sitemap";
 
 const title = "Curriculum";
 const mainImage = "/images/scott-backfist.png";
@@ -67,9 +69,9 @@ const CurriculumPage = (props) => {
             title={title}
             mainImage={mainImage}
             topParagraphs={topParagraphs}
-            menu={props.menu}
+            menu={topMenu}
             sidebar={sidebar}
-            sitemap={props.sitemap}>
+            sitemap={sitemap}>
                 <section className="subsection">
                     <h3 className="subsection-title">Class Structure</h3>
                     <p>Our classes are generally divided into the following phases. Some classes deviate slightly from this paradigm in order to focus on special curricula (especially when a visiting instructor is present), but, in general, each class tends to follow this pattern.</p>

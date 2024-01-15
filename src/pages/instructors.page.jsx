@@ -3,7 +3,9 @@ import { InfoPage } from '../components/05-organisms/InfoPage';
 import { DefinitionList } from '../components/02-molecules/DefinitionList';
 import { InstructorProfile } from '../components/02-molecules/InstructorProfile';
 
-import { sidebar } from './about-utils';
+import { sidebar } from '../data/sidebar';
+import { topMenu } from "../data/TopMenu";
+import { sitemap } from "../data/Sitemap";
 
 function InstructorsPage(props) {
     const title = "Instructors and Staff";
@@ -39,9 +41,9 @@ function InstructorsPage(props) {
             title={title}
             mainImage={mainImage}
             topParagraphs={topParagraphs}
-            menu={props.menu}
+            menu={topMenu}
             sidebar={sidebar}
-            sitemap={props.sitemap}>
+            sitemap={sitemap}>
             <section className="subsection">
                 <h3>Staff Member Category Definitions</h3>
                 <p>At the Sinking Moon School of Kung Fu, we have several different categories of staff member, depending on how active a given individual is in the day-to-day activities surrounding the organization.</p>

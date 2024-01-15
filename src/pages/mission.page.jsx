@@ -2,7 +2,9 @@ import React from 'react';
 
 import { InfoPage } from '../components/05-organisms/InfoPage';
 
-import { sidebar } from './about-utils';
+import { sidebar } from '../data/sidebar';
+import { topMenu } from "../data/TopMenu";
+import { sitemap } from "../data/Sitemap";
 
 import "./mission.scss";
 
@@ -21,9 +23,9 @@ function MissionPage(props) {
                 title={title}
                 mainImage={mainImage}
                 topParagraphs={topParagraphs}
-                menu={props.menu}
+                menu={topMenu}
                 sidebar={sidebar}
-                sitemap={props.sitemap}>
+                sitemap={sitemap}>
                     <section className="subsection">
                         <h3 className="subsection-title">Mission Statement</h3>
                         <p>To provide exceptional instruction in the martial arts and associated activities to students of all walks of life with the end goal of enhancing physical abilities, building discipline and self-esteem, learning honor and respect, promoting good citizenship, and having fun.</p>
@@ -42,7 +44,7 @@ function MissionPage(props) {
                     <section className="subsection">
                         <h3 className="subsection-title">Map & Directions</h3>
                         <div className="layout-two-side-by-side">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.2852295948824!2d-93.2797263878763!3d44.7545973803829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f63364be86889f%3A0x80b2bb0375d20ba8!2sSinking%20Moon%20School%20of%20Kung%20Fu!5e0!3m2!1sen!2sus!4v1698677949869!5m2!1sen!2sus" width="600" height="450" style={{"border": 0}} allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2833.2852295948824!2d-93.2797263878763!3d44.7545973803829!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x87f63364be86889f%3A0x80b2bb0375d20ba8!2sSinking%20Moon%20School%20of%20Kung%20Fu!5e0!3m2!1sen!2sus!4v1698677949869!5m2!1sen!2sus" width="600" height="450" style={{"border": 0}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             <div className="directions">
                                 <p>You can park anywhere in front of or behind the building. If you have difficulty with stairs, it's recommended to park in the rear of the building and enter through the back, since the back entrance is at the same story as the Sinking Moon School of Kung Fu.</p>
                             </div>
