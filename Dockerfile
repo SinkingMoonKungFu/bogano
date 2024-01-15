@@ -1,8 +1,8 @@
-FROM node
+FROM node:alpine
 WORKDIR /app
 COPY package.json yarn.lock ./
 RUN yarn install
 COPY . .
-EXPOSE 3000
+EXPOSE 80
 RUN npm install -g serve
-CMD ["serve", "-s", "dist"]
+CMD ["serve", "-l", "80", "-s", "dist"]

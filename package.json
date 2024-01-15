@@ -14,7 +14,8 @@
     "predeploy": "yarn run build",
     "tag:image:staging": "docker tag bogano:latest 730335612047.dkr.ecr.us-east-2.amazonaws.com/bogano:staging-latest",
     "push:image:staging": "docker push 730335612047.dkr.ecr.us-east-2.amazonaws.com/bogano:staging-latest",
-    "deploy:image:staging": "yarn build:image && yarn tag:image:staging && yarn push:image:staging"
+    "deploy:image:staging": "yarn build:image && yarn tag:image:staging && yarn push:image:staging",
+    "docker:login": "AWS_PROFILE=sinkingmoon aws ecr get-login-password | docker login --username AWS --password-stdin 730335612047.dkr.ecr.us-east-2.amazonaws.com"
   },
 
   "dependencies": {

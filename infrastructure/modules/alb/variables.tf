@@ -25,3 +25,7 @@ variable "loadBalancerConfig" {
 output "targetGroupArns" {
   value = aws_lb_target_group.targetGroup[*].arn
 }
+
+output "dns_name" {
+  value = aws_lb.loadBalancer.dns_name
+}
