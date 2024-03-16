@@ -1,0 +1,10 @@
+@import '../../assets/scss/colors';
+@import '../../assets/scss/fonts';
+
+.faq-section {
+    margin-bottom: 5rem;
+
+    .faq-section-title {
+        border-bottom: 1px solid $mine-shaft;
+    }
+}

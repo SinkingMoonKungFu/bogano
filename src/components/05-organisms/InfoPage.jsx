@@ -14,7 +14,7 @@ export const InfoPage = ({...props}) => {
         props.topParagraphs.forEach((para, index) => {
             let key = `infoPage-topParagraphs-${index}`;
             topLevelParagraphs.push((
-                <p key={key}>{para}</p>
+                <p key={key} dangerouslySetInnerHTML={{__html: para}}></p>
             ));
         });
     }

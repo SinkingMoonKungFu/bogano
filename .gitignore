@@ -26,3 +26,5 @@ infrastructure/**/.terraform/**
 infrastructure/**/.terraform.*lock.*
 infrastructure/**/terraform.tfstate.backup
 infrastructure/variables-secret.tf
+.pnp*
+.yarn/**

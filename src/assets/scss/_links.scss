@@ -1,0 +1,9 @@
+@import './colors';
+
+a {
+    color: $green-pea;
+
+    &:hover {
+        color: $olivine;
+    }
+}
