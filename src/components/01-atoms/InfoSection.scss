@@ -1,0 +1,47 @@
+section.infoSection {
+    &.withSidebar {
+        flex-direction: row;
+        display: flex;
+        max-width: 80em;
+        padding: 1rem 0;
+
+        .textContent {
+            padding-right: 1em;
+            width: 70%;
+
+            .textContent-image {
+                border-radius: 6px;
+                height: auto;
+                margin-bottom: 2rem;
+                max-width: 100%;
+            }
+
+            .subsection {
+                ul {
+                    list-style-type: square;
+                }
+            }
+        }
+
+        .sidebar {
+            width: 25em;
+        }
+    }
+
+    &.noSidebar {
+        .textContent {
+            .textContent-image {
+                border-radius: 6px;
+                height: auto;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+
+            .subsection {
+                ul {
+                    list-style-type: square;
+                }
+            }
+        }
+    }
+}

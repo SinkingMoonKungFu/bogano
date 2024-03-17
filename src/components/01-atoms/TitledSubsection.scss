@@ -1,0 +1,22 @@
+@import '../../assets/scss/colors';
+
+section.subsection {
+    margin-bottom: 2rem;
+
+    .subsection-title {
+        margin: 1.5rem 0 2rem 0;
+        position: relative;
+        color: $tundora;
+
+        &:after {
+            content: "";
+            display: block;
+            position: absolute;
+            width: 2.2rem;
+            height: 0.2rem;
+            top: 90%;
+            left: 1px;
+            background: $silver-chalice;
+        }
+    }
+}

@@ -13,8 +13,9 @@ main[role="main"] {
 
     .infopage-title {
         color: $tundora;
-        padding: 1rem 0 0.5rem;
-        margin: 0;
+        padding: 1rem 0 0.5rem 0;
+        margin: 0 0 2.0rem 0;
+        box-sizing: border-box;
         position: relative;
 
         &::after {
@@ -25,76 +26,6 @@ main[role="main"] {
             height: 0.5rem;
             bottom: 0;
             background: #a5a5a5;
-        }
-    }
-
-    .infoSection {
-        &.withSidebar {
-            flex-direction: row;
-            display: flex;
-            max-width: 80em;
-            padding: 1rem 0;
-
-            .textContent {
-                padding-right: 1em;
-                width: 70%;
-
-                .textContent-image {
-                    border-radius: 6px;
-                    height: auto;
-                    margin-bottom: 2rem;
-                    max-width: 100%;
-                }
-
-                .subsection {
-                    ul {
-                        list-style-type: square;
-                    }
-                }
-            }
-
-            .sidebar {
-                width: 25em;
-            }
-        }
-
-        &.noSidebar {
-            .textContent {
-                .textContent-image {
-                    border-radius: 6px;
-                    height: auto;
-                    margin-bottom: 1rem;
-                    width: 100%;
-                }
-
-                .subsection {
-                    ul {
-                        list-style-type: square;
-                    }
-                }
-            }
-        }
-    }
-}
-
-.subsection {
-    margin-bottom: 2rem;
-
-    .subsection-title {
-        margin-top: 0 !important;
-        margin: 0 0 2rem 0;
-        position: relative;
-        color: $tundora;
-
-        &:after {
-            content: "";
-            display: block;
-            position: absolute;
-            width: 2.2rem;
-            height: 0.2rem;
-            top: 30px;
-            left: 1px;
-            background: $silver-chalice;
         }
     }
 }
