@@ -8,11 +8,18 @@ export default {
   },
   tags: ["autodocs"],
   argTypes: {},
+    decorators: [
+        (Story) => (
+        <div style={{ margin: "2rem" }}>
+            <Story />
+        </div>
+        ),
+  ],
 };
 
 export const ScottJohnson = {
-  args: {
-    image: "/images/laoshiscott.png",
-    name: "Scott Johnson",
-  },
+    args: {
+        name: 'Scott Johnson',
+        image: '/images/laoshiscott.png',
+    },
 };
