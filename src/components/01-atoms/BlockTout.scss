@@ -2,12 +2,11 @@
     aspect-ratio: 1 / 1;
     display: block;
     box-sizing: border-box;
-    // max-width: 10rem;
-    // max-height: 60%;
-    // margin: 1.0rem 1.0rem;
     position: relative;
     overflow: hidden;
     border-radius: 6px;
+    container-name: blockTout;
+    container-type: inline-size;
 
     .block-tout-img {
         display: block;
@@ -19,7 +18,6 @@
         background: rgba(0, 0, 0, 0.5);
         bottom: 0;
         color: #fff;
-        font-size: 1.4rem;
         left: 0;
         margin-bottom: 0;
         padding: 0.5em;
@@ -32,5 +30,23 @@
 .block-tout:hover {
     .block-tout-headline {
         padding-bottom: 1.5rem;
+    }
+}
+
+@container blockTout (min-width: 150px) {
+    h4 {
+        font-size: 1.4rem;
+    }
+}
+
+@container blockTout ((min-width: 120px) and (max-width: 149px)) {
+    h4 {
+        font-size: 0.80rem;
+    }
+}
+
+@container blockTout (max-width: 119px) {
+    h4 {
+        font-size: 0.60rem;
     }
 }

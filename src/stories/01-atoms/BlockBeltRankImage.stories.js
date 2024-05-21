@@ -14,7 +14,7 @@ export const WhiteBelt = {
   args: {
     color: "white",
     description: "White Belt - Blank Page",
-    image: "/images/whitebelt.png",
+    image: "/images/whitebelt.jpg",
   },
 };
 
