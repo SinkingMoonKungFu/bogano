@@ -8,7 +8,7 @@ import monochromeLogo from '/images/logo-monochrome.svg';
 
 import { normalizeToBasePath } from "../../util/Url";
 
-import "./Logo.css";
+import "./Logo.scss";
 
 /**
  * Primary UI component for user interaction

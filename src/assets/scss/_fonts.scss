@@ -2,9 +2,18 @@
 
 // @import url('https://fonts.googleapis.com/css2?family=Aclonica&family=Alegreya:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 // @font-face {
-//     font-family: 'Aclonica';
-//     src: url('/fonts/Aclonica-Regular.ttf');
+    // font-family: 'Aclonica';
+    // src: url('/fonts/Aclonica-Regular.ttf');
 // }
+
+@font-face {
+    font-family: "Aclonica";
+    src: url("https://fonts.gstatic.com/s/aclonica/v22/K2FyfZJVlfNNSEBXGY7UAo-KBSLy.woff2") format("woff2");
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    unicode-range: U+0-FF, U+131, U+152-153, U+2BB-2BC, U+2C6, U+2DA, U+2DC, U+304, U+308, U+329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 @font-face {
     font-family: 'Alegreya';
@@ -59,7 +68,7 @@ h5,
 h6 {
     color: $scorpion;
     font-family: 'Aclonica', sans-serif;
-    font-weight: bold;
+    font-weight: 500;
     line-height: 1.2;
 
     &.shadowed {
