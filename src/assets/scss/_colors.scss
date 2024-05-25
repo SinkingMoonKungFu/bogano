@@ -19,6 +19,8 @@ $white-60pct: rgba(255, 255, 255, 0.6);
 $black-half-transparent: rgba(0, 0, 0, 0.5);
 $full-transparent: rgba(0, 0, 0, 0);
 
+$creed-gradient: linear-gradient($foam, darken($foam, 20%));
+
 // Belt colors
 $white-belt: white;
 $white-belt-secondary: darken($white-belt, 10%);

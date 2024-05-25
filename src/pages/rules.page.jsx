@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { InfoPage } from '../components/05-organisms/InfoPage';
-import { RulesList } from '../components/02-molecules/RulesList';
+import { NumericList } from '../components/02-molecules/NumericList';
 
 import { sidebar } from '../data/sidebar';
 import { topMenu } from "../data/TopMenu";
@@ -89,8 +89,8 @@ function RulesPage(props) {
                 sitemap={sitemap}>
                     <section className="subsection">
                         <h3 className="subsection-title">Rules of the Sinking Moon School of Kung Fu</h3>
-                        <RulesList
-                            rules={rules}
+                        <NumericList
+                            items={rules}
                         />
                     </section>
                 </InfoPage>
