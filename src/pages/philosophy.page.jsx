@@ -11,6 +11,8 @@ import { NumericList } from "../components/02-molecules/NumericList";
 import colors from "../assets/scss/colors.module.scss";
 const { FlamePea, Ronchi } = colors;
 
+import './philosophy.scss';
+
 const title = "Philosophy and Ethics";
 const topParagraphs = [
     "Within any martial arts system, fighting and the use of force are the underlying skill being taught. In learning these techniques, students are given knowledge that has been handed down for centuries. That knowledge has the power, when focused, to turn the weak stronger and places a check on the power of those who were given natural ability.",
@@ -110,10 +112,31 @@ function PhilosophyPage(props) {
                 </section>
                 <section className="subsection">
                     <a name="creed-of-the-sinking-moon"></a>
-                    <h3 className="subsection-title">The Creed of the Sinking Moon School of Kung Fu</h3>
+                    <h3 className="subsection-title">The Creed of the Sinking Moon</h3>
+                    <p>The Creed of the Sinking Moon represents a statement that each member of the organization should strive to uphold throughout their life. It depicts the values we, as members share. While it is not required that members memorize the contents of the Creed word-for-word, it is required that members seek to embody the spirit of the Creed and integrate it into their day-to-day life.</p>
+                    <blockquote>
+                        <h5>As a student in the way of the Sinking Moon, I</h5>
+                        <ul>
+                            <li>fight with my eyes open,</li>
+                            <li>strive for justice through peace and peace through justice,</li>
+                            <li>stand on mountains that I did not create and climb towers I did not build,</li>
+                            <li>constantly seek enlightenment so I may conquer the darkness,</li>
+                            <li>sharpen fellow practicioners as iron sharpens iron,</li>
+                            <li>see crisis as an opportunity to better myself,</li>
+                            <li>test my mettle through fire but never lose hope,</li>
+                            <li>empty myself so I may be filled,</li>
+                            <li>look beyond the obvious to see the interplay between chaos and order,</li>
+                            <li>maintain self control because I realize emotion is not the same as strength,</li>
+                            <li>allow my enemies to create my victories,</li>
+                            <li>face my fears for they are but shadows,</li>
+                            <li>and remember that I am, before all else, human.</li>
+                        </ul>
+                    </blockquote>
+                    <p><a href="/creed-of-the-sinking-moon.pdf">Printable version of the Creed of the Sinking Moon</a></p>
                 </section>
                 <section className="subsection">
                     <h3 className="subsection-title">Symbols</h3>
+                    <p>The symbols of our organization visually represent our ethics and philosophy. These symbols are unique to the Sinking Moon School of Kung Fu and the Wu Chi Kung Fu Association. Use of these symbols should be restricted to items that follow the values of the greater organizations and should not be used in a context that reflects poorly on the Sinking Moon School of Kung Fu, the Wu Chi Kung Fu Association, the greater martial arts community, or any participants or leaders of these organizations.</p>
                     <ImageExplanationList
                         title={symbologyJson.logoBreakdown.title}
                         description={symbologyJson.logoBreakdown.description}
