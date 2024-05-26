@@ -11,7 +11,6 @@ export default create({
   brandImage: "/images/SinkingMoonBrandImage.png",
   brandTarget: "_self",
 
-  //
   colorPrimary: "#3A10E5",
   colorSecondary: "#dc5b45",
 

@@ -6,6 +6,8 @@ import {
 
 import routes from '~react-pages';
 
+import "./assets/scss/_root.scss";
+
 function App() {
     return (
         <Suspense fallback={<p>Loading...</p>}>

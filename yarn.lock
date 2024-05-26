@@ -2172,7 +2172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@popperjs/core@npm:^2.11.6":
+"@popperjs/core@npm:^2.11.6, @popperjs/core@npm:^2.11.8":
   version: 2.11.8
   resolution: "@popperjs/core@npm:2.11.8"
   checksum: 10c0/4681e682abc006d25eb380d0cf3efc7557043f53b6aea7a5057d0d1e7df849a00e281cd8ea79c902a35a414d7919621fc2ba293ecec05f413598e0b23d5a1e63
@@ -4871,6 +4871,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "bogano@workspace:."
   dependencies:
+    "@popperjs/core": "npm:^2.11.8"
     "@storybook/addon-essentials": "npm:^7.5.0-alpha.3"
     "@storybook/addon-interactions": "npm:^7.5.0-alpha.3"
     "@storybook/addon-links": "npm:^7.5.0-alpha.3"
@@ -4885,7 +4886,8 @@ __metadata:
     "@types/react-dom": "npm:^18.2.17"
     "@vitejs/plugin-react": "npm:^4.2.1"
     apexcharts: "npm:^3.49.1"
-    bootstrap: "npm:^5.3.2"
+    bootstrap: "npm:^5.3.3"
+    chance: "npm:^1.1.11"
     chromatic: "npm:^7.2.0"
     eslint: "npm:^8.55.0"
     eslint-plugin-react: "npm:^7.33.2"
@@ -4908,7 +4910,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"bootstrap@npm:^5.3.2":
+"bootstrap@npm:^5.3.3":
   version: 5.3.3
   resolution: "bootstrap@npm:5.3.3"
   peerDependencies:
@@ -5103,6 +5105,13 @@ __metadata:
     ansi-styles: "npm:^4.1.0"
     supports-color: "npm:^7.1.0"
   checksum: 10c0/4a3fef5cc34975c898ffe77141450f679721df9dde00f6c304353fa9c8b571929123b26a0e4617bde5018977eb655b31970c297b91b63ee83bb82aeb04666880
+  languageName: node
+  linkType: hard
+
+"chance@npm:^1.1.11":
+  version: 1.1.11
+  resolution: "chance@npm:1.1.11"
+  checksum: 10c0/d17cadeda91f16ab3b2459d39980712428cacf825e3262f923a2bd896ccf40ff6b97967c816d5152e9841af376bc1dbdc1acd9b792d5828b021753fbe334f086
   languageName: node
   linkType: hard
 
