@@ -1,0 +1,15 @@
+@import 'forms';
+
+select {
+    &.placeholder-active {
+        color: $dusty-gray !important;
+    }
+
+    .dropdown-placeholder {
+        display: none;
+    }
+
+    option:hover, option:focus, option:checked, option:active {
+        background-color: $flame-pea;
+    }
+}

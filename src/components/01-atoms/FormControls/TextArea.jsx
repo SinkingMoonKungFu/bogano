@@ -16,7 +16,6 @@ export const TextArea = ({...props}) => {
                 placeholder={props.placeholder ? props.placeholder : undefined}
             />
         </div>
-
     );
 };
 
