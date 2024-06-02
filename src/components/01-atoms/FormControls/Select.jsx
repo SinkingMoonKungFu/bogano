@@ -27,6 +27,7 @@ export const Select = ({...props}) => {
             <label htmlFor={domId} className="form-input-label">{props.title}</label>
             <select id={domId} className={classNames.join(" ")} defaultValue={props.placeholder} onChange={(evt) => {
                 evt.target.classList.remove("placeholder-active");
+                props.onChange ? props.onChange(evt.target.value) : () => {}
             }}>
                 {options}
             </select>

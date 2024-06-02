@@ -7,11 +7,6 @@ import './TextInput.scss';
 
 const onTelephoneKeyUp = (event) => {
     event.currentTarget.value = formatPhoneNumberInTextField(event.currentTarget.value, event.keyCode);
-    //     var phoneNumberElement = $(this);
-    // phoneNumberElement.val(
-    //   formatPhoneNumberInTextField(phoneNumberElement.val(), ev.keyCode)
-    // );
-
 };
 
 export const TextInput = ({...props}) => {
@@ -28,11 +23,15 @@ export const TextInput = ({...props}) => {
         <div className="form-input-field">
             <label htmlFor={domId} className="form-input-label">{props.title}</label>
             <input
+                className="text-input"
                 id={props.id ? props.id : domId}
                 defaultValue={defaultValue ? defaultValue : undefined }
                 type={props.type ? props.type : "text"}
                 placeholder={props.placeholder && !props.value ? props.placeholder : null}
                 onKeyUp={props.type === 'tel' ? onTelephoneKeyUp : null}
+                onChange={(event) => {
+                    props.onChange ? props.onChange(event.target.value) : () => {}
+                }}
             />
         </div>
     );
@@ -43,7 +42,8 @@ TextInput.propTypes = {
     title: PropTypes.string,
     placeholder: PropTypes.string,
     type: PropTypes.string,
-    value: PropTypes.string
+    value: PropTypes.string,
+    onChange: PropTypes.func
 };
 
 TextInput.defaultProps = {

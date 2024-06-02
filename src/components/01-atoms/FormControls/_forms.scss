@@ -2,15 +2,16 @@
 
 .form-input-field {
     margin-bottom: 1em;
+    width: 100%;
 
     label {
         display: block;
         font-weight: bold;
     }
 
-    textarea, input, select {
+    textarea, input.text-input, select {
         width: 100%;
-        border: 1px solid #a5a5a5;
+        border: 1px solid $silver-chalice;
         border-radius: 6px;
         padding: 1rem;
         font-family: "Arial", sans-serif;

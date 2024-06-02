@@ -14,6 +14,9 @@ export const TextArea = ({...props}) => {
                 id={domId}
                 rows={props.rows}
                 placeholder={props.placeholder ? props.placeholder : undefined}
+                onChange={(event) => {
+                    props.onChange ? props.onChange(event.target.value) : () => {}
+                }}
             />
         </div>
     );

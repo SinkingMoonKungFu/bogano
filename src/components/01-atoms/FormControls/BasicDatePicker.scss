@@ -1,0 +1,55 @@
+@import '../../../assets/scss/colors';
+@import 'forms';
+
+.react-datepicker  {
+    .react-datepicker-container {
+        .react-datepicker-top {
+            * {
+                font-family: 'Arial', sans-serif;
+                color: #fff;
+            }
+
+            .react-datepicker-body {
+                .react-datepicker-row {
+                    .react-datepicker-picker {
+                        .day {
+                            font-family: 'Arial', sans-serif;
+                        }
+                    }
+                }
+            }
+
+            text-align: center;
+            background: none;
+            background-color: $flame-pea;
+            // background: linear-gradient(#2da1f8, #1789dd);
+            border-top: 1px solid $silver-chalice;
+            border-left: 1px solid $silver-chalice;
+            border-right: 1px solid $silver-chalice;
+            border-top-left-radius: 2px;
+            border-top-right-radius: 2px;
+        }
+    }
+}
+
+.form-input-field {
+    .react-datepicker-component {
+        .react-datepicker-input {
+                height: auto;
+                // padding: 1rem;
+                border: 1px solid $silver-chalice;
+                border-radius: 6px;
+                background: none;
+                background-color: white;
+
+                input {
+                    height: 100%;
+                    font-family: "Arial", sans-serif;
+                    color: $tundora;
+                    padding: 1rem;
+                    font-weight: normal;
+                    font-size: 16px;
+                }
+        }
+    }
+}

@@ -3,8 +3,6 @@ import { NumberedListItem } from "../../components/01-atoms/NumberedListItem";
 import colors from "../../assets/scss/colors.module.scss";
 const { FlamePea } = colors;
 
-console.log("Flame Pea: ", FlamePea);
-
 export default {
   title: "Atoms/NumberedListItem",
   component: NumberedListItem,
